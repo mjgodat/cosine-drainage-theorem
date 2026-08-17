@@ -1,7 +1,27 @@
-# The Cosine Drainage Theorem
+# The Cosine Drainage Conjecture and Rank-One Drainage Theorem
 
 **Michael Godat**
 *Independent Researcher*
+
+## Nomenclature
+
+This document contains two layers:
+
+1. **The Cosine Drainage Conjecture:** The broad hypothesis that cosine-greedy
+   traversal on embedded non-regular graphs exhibits progressive degree drainage
+   under directional-degree coupling. Supported by empirical evidence across six
+   graph families (degree CV 1.34 to 2.69) and two neural encoders. Not proved
+   for all non-regular graphs — a single valid counterexample would refute the
+   universal claim.
+
+2. **The Rank-One Cosine Drainage Theorem:** The provable result under the
+   explicit rank-one (Chung-Lu) generative model with measured angular-degree
+   coupling β > 0. This is a formal conditional result: under model M and
+   assumptions A1-A5, drainage occurs and converges to ρ_eff.
+
+The conjecture becomes a theorem only through proof under a specified model;
+observations strengthen belief and expose conditions but do not prove a
+universal mathematical claim.
 
 ---
 
@@ -52,9 +72,9 @@ where F_i is the current frontier and t̂ = φ(t)/‖φ(t)‖. Total visit budge
 
 ---
 
-## Theorem (Cosine Drainage)
+## Rank-One Cosine Drainage Theorem
 
-*Under assumptions A1–A5 the following hold.*
+*Under assumptions A1-A5 and the rank-one (Chung-Lu) generative model, the following hold. The broader Cosine Drainage Conjecture asserts that these results extend to all non-regular embedded graphs satisfying A3'; this extension is supported by empirical evidence across six graph families but is not formally proved.*
 
 ---
 
@@ -232,7 +252,47 @@ Drainage vanishes if and only if Var(k) = 0 (regular graph). All other regimes m
 
 ## Remarks on Scope
 
-The theorem is specific to cosine (norm-invariant) selection. Euclidean or hyperbolic greedy policies possess different norm sensitivities and lie outside the present claims. The single calibration constant appearing in the scissors expression is a residual empiricism of the same character as many constants in network-science theorems; the functional dependence and the architectural consequences do not rely on its particular numerical value.
+The Rank-One Cosine Drainage Theorem is specific to cosine (norm-invariant)
+selection under the Chung-Lu generative model with measured angular-degree
+coupling β > 0. Euclidean or hyperbolic greedy policies possess different
+norm sensitivities and lie outside the present claims. The single calibration
+constant appearing in the scissors expression is a residual empiricism of the
+same character as many constants in network-science theorems; the functional
+dependence and the architectural consequences do not rely on its particular
+numerical value.
+
+The broader Cosine Drainage Conjecture — that the same drainage mechanism
+operates on all non-regular embedded graphs with β > 0 — is supported by
+consistent empirical observation across six graph families (degree CV 1.34
+to 2.69, including synthetic kNN) and two neural encoders, but is not
+formally proved beyond the rank-one model. A single valid counterexample
+(a non-regular embedded graph with β > 0 where cosine-greedy traversal does
+NOT exhibit progressive drainage) would refute the conjecture.
+
+On non-regular graphs, if residual directional structure causes cosine-greedy
+selection to underweight high-degree candidates relative to size-biased
+neighbor sampling, the selected degree regresses toward a lower effective
+degree regime. The effect may be weak in near-regular graphs and stronger
+when degree variance, hubness, directional-degree coupling, or initial hub
+degree are larger. Var(k) > 0 alone cannot logically ensure drainage; the
+coupling condition β > 0 and the traversal assumptions are essential.
+
+---
+
+## Boundary-Search Program
+
+To strengthen the conjecture toward theorem status beyond rank-one, actively
+seek counterexamples in:
+
+1. Near-regular graphs (degree CV < 0.5)
+2. Embeddings with β ≈ 0 (deliberately isotropic encoders)
+3. Degree-direction decoupled embeddings (adversarial construction)
+4. Adversarial target placement (targets at hub nodes only)
+5. Alternative graph constructions (radius graphs, mutual-kNN, Watts-Strogatz)
+
+If drainage persists across these boundary cases, the conjecture is
+substantially hardened. If any case breaks drainage, it identifies the
+precise boundary of the theorem's applicability.
 
 ---
 
@@ -247,4 +307,4 @@ The theorem is specific to cosine (norm-invariant) selection. Euclidean or hyper
 
 ---
 
-*Unified theorem, revised 17 August 2026. Incorporates systematic residual angular-degree correlation, effective attractor rho_eff(beta), justified tree bound for cosine, scissors model of alignment probability, and bottleneck-dependent waypoint spacing rule. This is a conditional formal account with a mixture of derived, fitted, and empirically calibrated quantities. Validated across multiple real graphs and embedding families (nomic, BGE, native features). All five quantitative gaps closed.*
+*Revised 17 August 2026. Two-layer structure: the Rank-One Cosine Drainage Theorem (proved under Chung-Lu model with β > 0) and the broader Cosine Drainage Conjecture (supported by six graph families, two encoders, not formally proved beyond rank-one). Incorporates systematic residual angular-degree correlation, effective attractor ρ_eff(β), justified tree bound for cosine, scissors model of alignment probability, and bottleneck-dependent waypoint spacing rule. This is a conditional formal account with a mixture of derived, fitted, and empirically calibrated quantities. Boundary-search program specified for future counterexample testing.*
