@@ -7,13 +7,13 @@
 
 ## Significance
 
-The Vector-Graph Semantic Gap (VGSG) was established empirically: cosine-similarity-biased traversal of high-dimensional embedded graphs systematically fails to reach graph-reachable targets under finite budgets. The Cosine Drainage Theorem converts this observation into a formal account.
+The Vector-Graph Semantic Gap (VGSG) was established empirically: cosine-similarity-biased traversal of high-dimensional embedded graphs systematically fails to reach graph-reachable targets under finite budgets. The Cosine Drainage Theorem converts this observation into a conditional formal account supported by empirical evidence across multiple graphs and encoders.
 
 The theorem identifies the mechanism as progressive degree regression under directional selection. Cosine is a purely angular, norm-invariant metric. In high-dimensional embeddings, node degree correlates with proximity to the distributional mean—both radially and, residual to norm, angularly. Consequently, cosine-to-target selection is mildly degree-averse: it preferentially selects away from the mean direction and therefore away from hubs. The expected degree of the selected neighbor equals a reduced attractor ρ_eff(β) < ρ, where ρ = ⟨k²⟩/⟨k⟩ is the ordinary size-biased mean and β > 0 is the residual within-norm angular-degree correlation. Each successive step repeats this regression, producing monotone degree drainage into the structural periphery.
 
-The theorem derives the miss probability as a product of per-step alignment factors governed by a scissors effect (declining degree versus accumulating frontier), locates the drainage-driven phase transition, and proves that multi-anchor and waypoint-injection architectures eliminate the failure mode by construction. Optimal waypoint spacing is local and bottleneck-dependent; on traces with high dark-link density the optimum collapses to adjacent placement, formalizing the statement that "the path is the answer."
+The theorem derives the miss probability as a product of per-step alignment factors governed by a scissors effect (declining degree versus accumulating frontier), locates the drainage-driven phase transition, and shows that multi-anchor and waypoint-injection architectures bound the failure mode under stated assumptions. Recommended waypoint spacing is local and bottleneck-dependent; on traces with high dark-link density the spacing collapses to adjacent placement, formalizing the statement that "the path is the answer."
 
-Every primary quantity is computable from the graph's degree distribution and the embedding's angular statistics, rendering the predictions falsifiable on any new graph-embedding pair. The theorem supplies the theoretical foundation for why retrieval systems that seed from cosine-nearest neighbors and expand by graph proximity are structurally limited in discovering distant cross-domain connections, and it prescribes the architectural remedies.
+Every primary quantity is computable from the graph's degree distribution and the embedding's angular statistics — subject to measuring beta and calibrating c_0 on the target graph — rendering the predictions falsifiable on any new graph-embedding pair. The theorem supplies the theoretical foundation for why retrieval systems that seed from cosine-nearest neighbors and expand by graph proximity are structurally limited in discovering distant cross-domain connections, and it prescribes the architectural remedies.
 
 ---
 
@@ -77,7 +77,7 @@ The sequence {d_i} is a supermartingale above ρ_eff and a submartingale below i
 
 The multi-step appearance of drainage on real trajectories is produced by variance (tail rescue from high-degree nodes) together with mild assortativity; the expectation itself collapses in a single step when α = 0.
 
-**Proof status.** Proved for the rank-one case under the measured residual correlation β (size-biased sampling + directional selection away from the mean). Proof sketch for the linear-ANND assortative extension.
+**Proof status.** Formally proved for the rank-one case (drainage to size-biased mean under directional selection away from the mean). The effective attractor rho_eff = rho * exp(-|beta| * sqrt(D_eff)) is an empirically fitted floor; the exponential form and sqrt(D_eff) scaling match the observed drainage attractor across encoders but are not derived from a generative model. Proof sketch for the linear-ANND assortative extension. The drainage recurrence E[d_{i+1}] = rho_eff + alpha(d_i - rho_eff) is a conditional result under the rank-one model with measured assortativity.
 
 ---
 
@@ -105,7 +105,7 @@ The product therefore collapses faster than exponentially.
 
 **Empirical calibration.** With a single constant c₀ fixed at the d = 2 miss rate, the same expression recovers the d = 3 and d = 4 miss rates to within one percentage point on NeuroCrystal, reproducing the observed phase-transition cliff.
 
-**Proof status.** Lower bound proved under the locally tree-like (configuration-model) approximation. The tree approximation remains valid for cosine-greedy search: clustering supplies multi-path redundancy that BFS can exploit, but cosine selects solely by angular alignment and therefore cannot use those alternative paths. The correction is O(1/ρ_eff) and does not grow with clustering coefficient. Scissors functional form derived; one calibration constant retained.
+**Proof status.** Lower bound derived under the locally tree-like (configuration-model) approximation. The tree approximation remains valid for cosine-greedy search: clustering supplies multi-path redundancy that BFS can exploit, but cosine selects solely by angular alignment and therefore cannot use those alternative paths. The correction is O(1/rho_eff) and does not grow with clustering coefficient. The scissors functional form is a semi-empirical model with one calibration constant c_0, not a closed-form derivation from first principles.
 
 ---
 
@@ -121,7 +121,7 @@ For d ≤ d_drain residual hub connectivity keeps per-step miss rates moderate. 
 **Empirical match (NeuroCrystal, H = 100).**
 d₀ ≈ 370, ρ_eff ≈ 33 yield d_drain ≈ 3.5. Observed miss rates — 0% (d=1), 12.4% (d=2), 32.3% (d=3), 81.8% (d=4) — confirm the transition between distance 3 and 4. The location is a variance phenomenon: expectation collapses quickly, but high-degree nodes retain a non-negligible probability of sampling rare high-degree neighbors until degree falls below the tail-rescue threshold.
 
-**Proof status.** Derived from the drainage recurrence and the two-regime model; transition sharpness calibrated empirically.
+**Proof status.** Derived from the drainage recurrence (itself conditional on rank-one + measured assortativity) and the two-regime model; transition location and sharpness calibrated empirically.
 
 ---
 
@@ -133,15 +133,15 @@ d₀ ≈ 370, ρ_eff ≈ 33 yield d_drain ≈ 3.5. Observed miss rates — 0% (d
 
 Each side covers roughly half the distance; the miss event requires both expansions to fail independently. The bound converts an 81.8% single-source miss rate at d = 4 into an upper bound of approximately 1.5%.
 
-**Optimality window.** Multi-anchor improves upon single-source when d_drain < d < 2H.
+**Improvement window.** Multi-anchor improves upon single-source when d_drain < d < 2H (conditional on frontier independence).
 
-**Proof status.** Proved under the independence assumption that forward and backward frontiers do not interact before the bridge zone.
+**Proof status.** Conditional bound under the assumption that forward and backward frontiers do not interact before the bridge zone. In practice, frontiers share the same graph and may exhibit correlation, loosening the bound.
 
 ---
 
-### (v) Waypoint Elimination
+### (v) Waypoint Injection
 
-**Waypoint injection eliminates drainage by restarting the walk at known intermediate nodes, preventing the supermartingale from accumulating.**
+**Waypoint injection bounds cumulative drainage by restarting the walk at known intermediate nodes, preventing the supermartingale from accumulating across segments.**
 
 Let W = {w₀ = s, w₁, ..., w_m, w_{m+1} = t} be a sequence of waypoints with local budgets H_j = H/(m+1). Then:
 
@@ -151,16 +151,16 @@ Let W = {w₀ = s, w₁, ..., w_m, w_{m+1} = t} be a sequence of waypoints with 
 
     P(miss_waypoint) = 1 - ∏_{j=0}^{m} (1 - P(miss_segment_j))
 
-When consecutive waypoints are adjacent (d_G(w_j, w_{j+1}) = 1) every factor vanishes and total miss probability is identically zero.
+When consecutive waypoints are adjacent (d_G(w_j, w_{j+1}) = 1) every factor vanishes and total miss probability is zero, provided the algorithm retains the adjacent target node within its budget and frontier.
 
-**Optimal spacing.**
-The optimal local spacing is not a global constant:
+**Recommended spacing.**
+The recommended local spacing is a design rule, not a formally proved optimum (formal optimality would require an explicit objective function and waypoint-generation cost model):
 
     W* = min(d_drain, 1/bottleneck_density)
 
 Bottleneck density is the fraction of consecutive concept pairs that are semantically successive yet non-adjacent in the graph ("dark links"). On NeuroCrystal validated traces this density equals 0.44, forcing W* → 1. Consequently, knowing where to place the waypoints is equivalent to knowing the path; the waypoints are not merely a guide for search — they constitute the discovery. This supplies the formal content of the architectural claim "the path is the answer."
 
-**Proof status.** Proved from the d_G = 1 boundary condition and the restart argument. Optimal-spacing expression derived from the drainage scale together with measured bottleneck density.
+**Proof status.** The d_G = 1 boundary condition (P(miss | d_G = 1) = 0) is formally proved. The restart argument (bounding cumulative drainage by segment) is formally proved. The spacing expression W* is a design rule derived from the drainage scale and measured bottleneck density, not a formal optimum.
 
 ---
 
@@ -169,11 +169,11 @@ Bottleneck density is the fraction of consecutive concept pairs that are semanti
 **Corollary 1 (Suboptimality of cosine-greedy).**
 For any graph distance d > d_drain, single-source cosine-greedy traversal has miss probability bounded away from zero. Cosine-greedy is therefore fundamentally limited for long-range traversal on embedded graphs with heterogeneous degree distributions.
 
-**Corollary 2 (Optimality of multi-anchor).**
-For d_drain < d < 2H, multi-anchor expansion achieves a quadratic improvement in survival probability and is optimal when the target is known but intermediate waypoints are not.
+**Corollary 2 (Multi-anchor improvement).**
+For d_drain < d < 2H, multi-anchor expansion achieves a quadratic improvement in survival probability and is the recommended strategy when the target is known but intermediate waypoints are not.
 
-**Corollary 3 (Optimality of waypoint injection).**
-Whenever a waypoint sequence exists with consecutive distances less than d_drain (in particular when bottleneck density forces adjacent placement), waypoint-injected traversal achieves strictly lower miss probability than either single-source or multi-anchor methods. It is the optimal strategy when intermediate concepts can be generated.
+**Corollary 3 (Waypoint injection).**
+Whenever a waypoint sequence exists with consecutive distances less than d_drain (in particular when bottleneck density forces adjacent placement), waypoint-injected traversal achieves strictly lower miss probability than either single-source or multi-anchor methods. It achieves the lowest miss probability among tested strategies when intermediate concepts can be generated.
 
 **Corollary 4 (Derivation of the predictive model).**
 The empirical three-feature model reach ~ a·Γ + b·log(H) + c·degCV follows from the theorem:
@@ -212,17 +212,21 @@ Drainage vanishes if and only if Var(k) = 0 (regular graph). All other regimes m
 
 ## Proof-Status Summary
 
-| Component | Status |
-|-----------|--------|
-| Residual angular-degree correlation β (revised A3') | Measured, encoder-independent, systematic on real graphs |
-| Drainage to ρ_eff(β) (rank-one) | Proved |
-| Assortative extension | Proof sketch (linear ANND) |
-| Miss-probability lower bound (tree-like) | Proved; tree approximation justified for cosine |
-| Scissors form of p_align | Derived; one calibration constant |
-| Phase-transition location | Derived from drainage + scissors |
-| Multi-anchor quadratic bound | Proved under independence |
-| Waypoint elimination | Proved |
-| Optimal spacing W* | Derived; "path is the answer" is a theorem consequence |
+| Component | Status | Epistemic Category |
+|-----------|--------|-------------------|
+| Residual angular-degree correlation beta (revised A3') | Measured, encoder-independent, systematic on real graphs | Empirically fitted |
+| Drainage to size-biased mean (rank-one) | Formally proved (size-biased sampling + directional selection) | Formally proved |
+| rho_eff = rho * exp(-\|beta\| * sqrt(D_eff)) | Matches observed attractor; exponential form and sqrt(D_eff) scaling are fitted | Empirically fitted |
+| Drainage recurrence (assortative) | Conditional on rank-one + measured assortativity | Conditional result |
+| Assortative extension | Proof sketch (linear ANND) | Conditional result |
+| Miss-probability lower bound (tree-like) | Derived under locally tree-like approximation; justified for cosine | Conditional result |
+| Scissors form of p_align | Semi-empirical model; one calibration constant c_0 | Empirically fitted |
+| Phase-transition location d_drain | Derived from the recurrence (itself conditional) | Conditional result |
+| Multi-anchor quadratic bound | Conditional on frontier independence (frontiers share the graph) | Conditional result |
+| Waypoint segment restart | Formally proved (d_G = 1 boundary + restart argument) | Formally proved |
+| Spacing rule W* | Design rule from drainage scale + measured bottleneck density | Design heuristic |
+| P(miss \| d_G = 1) = 0 | Formally proved | Formally proved |
+| Semantic gap existence (if d_G > H then miss) | Formally proved | Formally proved |
 
 ---
 
@@ -243,4 +247,4 @@ The theorem is specific to cosine (norm-invariant) selection. Euclidean or hyper
 
 ---
 
-*Unified theorem, revised 17 August 2026. Incorporates systematic residual angular-degree correlation, effective attractor ρ_eff(β), justified tree bound for cosine, scissors derivation of alignment probability, and bottleneck-dependent optimal waypoint spacing. Validated across multiple real graphs and embedding families (nomic, BGE, native features). All five quantitative gaps closed.*
+*Unified theorem, revised 17 August 2026. Incorporates systematic residual angular-degree correlation, effective attractor rho_eff(beta), justified tree bound for cosine, scissors model of alignment probability, and bottleneck-dependent waypoint spacing rule. This is a conditional formal account with a mixture of derived, fitted, and empirically calibrated quantities. Validated across multiple real graphs and embedding families (nomic, BGE, native features). All five quantitative gaps closed.*
