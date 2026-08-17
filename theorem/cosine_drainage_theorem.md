@@ -34,7 +34,13 @@ universal mathematical claim.
 
 ## Significance
 
-The Vector-Graph Semantic Gap (VGSG) was established empirically: cosine-similarity-biased traversal of high-dimensional embedded graphs systematically fails to reach graph-reachable targets under finite budgets. The Cosine Drainage Theorem converts this observation into a conditional formal account supported by empirical evidence across six structurally diverse graphs — scale-free (NeuroCrystal, degree CV = 2.69), heterogeneous (Cora CV = 1.34, Amazon CV = 1.94, DBLP CV = 1.57), and synthetic kNN (Isotropic CV = 1.65, Mixture CV = 1.34) — and two independent neural encoders.
+The Vector-Graph Semantic Gap (VGSG) was established empirically: cosine-similarity-biased traversal of high-dimensional embedded graphs systematically fails to reach graph-reachable targets under finite budgets. This document contains two separable results:
+
+**The Cosine Drainage Conjecture (conditional mechanism).** In embedded graphs where cosine-to-target selection systematically underweights higher-degree frontier candidates relative to the graph's size-biased neighbor baseline, greedy traversal exhibits degree drainage toward a lower effective degree regime. The sign and magnitude of the effect are determined jointly by graph topology, embedding geometry, target distribution, and frontier dynamics. Drainage was observed in 10 of 15 evaluated graph families, was weak or mixed in 4, and reversed in 1 (SBM, where community-core geometry preferentially ranks high-degree nodes). The Rank-One Cosine Drainage Theorem proves the mechanism under the Chung-Lu model with measured angular-degree coupling β > 0.
+
+**The Cross-Family Multi-Anchor Result (robust intervention).** At matched budgets, Multi-Anchor expansion outperformed single-source cosine in all 15 evaluated graph families — spanning scale-free, heterogeneous, co-authorship, co-purchase, citation, web-hyperlink, film co-occurrence, random (Erdos-Renyi), small-world (Watts-Strogatz), block-model (SBM), preferential-attachment (Barabasi-Albert), and synthetic kNN constructions — including graphs exhibiting drainage, weak drainage, and anti-drainage. The intervention works regardless of the local mechanism.
+
+These two results are supported by empirical evidence across 15 graph families (degree CV 0.10 to 2.69) and two independent neural encoders (nomic-embed-text 768D, BGE-small-en-v1.5 384D).
 
 The theorem identifies the mechanism as progressive degree regression under directional selection. Cosine is a purely angular, norm-invariant metric. In high-dimensional embeddings, node degree correlates with proximity to the distributional mean—both radially and, residual to norm, angularly. Consequently, cosine-to-target selection is mildly degree-averse: it preferentially selects away from the mean direction and therefore away from hubs. The expected degree of the selected neighbor equals a reduced attractor ρ_eff(β) < ρ, where ρ = ⟨k²⟩/⟨k⟩ is the ordinary size-biased mean and β > 0 is the residual within-norm angular-degree correlation. Each successive step repeats this regression, producing monotone degree drainage into the structural periphery.
 
@@ -223,6 +229,8 @@ Drainage vanishes if and only if Var(k) = 0 (regular graph). All other regimes m
 | Assortative mixing | Drainage slowed but sub-linear |
 | Low dimension (D < 100) | Drainage weakened |
 | Target itself a hub | Path still drains; reachability is a race against d_drain |
+| Stochastic Block Model | **Anti-drainage** observed (T3 = +0.52): within-community cosine expansion moves toward higher-degree cores |
+| Barabasi-Albert + random embeddings | Drainage occurs despite PA topology; realized embedding geometry, not graph generative model alone, determines the sign |
 
 ### When miss probability is zero
 1. d_G(s, t) = 1,
