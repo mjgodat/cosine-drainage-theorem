@@ -1,7 +1,14 @@
-# The Cosine Drainage Conjecture and Rank-One Drainage Theorem
+# The Cosine Drainage Theorem: A Rank-One Proof and a Cross-Family Conjecture for Embedded Non-Regular Graphs
 
 **Michael Godat**
 *Independent Researcher*
+
+---
+
+> **Theorem scope.** The formal result applies to the Chung-Lu rank-one model under A1-A5.
+> **Conjecture scope.** The broader non-regular-graph claim is supported by experiments across six real and synthetic graph families but is not claimed as universally proved.
+
+---
 
 ## Nomenclature
 
@@ -93,7 +100,7 @@ where α ∈ (-1, 1) encodes residual degree-degree correlation (Newman assortat
 
     E[d_k] = ρ_eff + α^k · (d₀ - ρ_eff)
 
-The sequence {d_i} is a supermartingale above ρ_eff and a submartingale below it, with ρ_eff the unique attractor.
+For sufficiently large d_i (specifically d_i > ρ_eff + O(d_i^{-1/2}), where the error margin accounts for finite-sample fluctuations), the sequence {d_i} is a supermartingale. Below ρ_eff, it is a submartingale. ρ_eff is the unique attractor.
 
 The multi-step appearance of drainage on real trajectories is produced by variance (tail rescue from high-degree nodes) together with mild assortativity; the expectation itself collapses in a single step when α = 0.
 
