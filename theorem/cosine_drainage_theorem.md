@@ -62,16 +62,27 @@ Let G = (V, E) be a simple undirected graph on N vertices with empirical degree 
 **(A2) High-dimensional embedding.**
 Each node v is assigned an embedding φ(v) ∈ ℝ^D with D ≫ 1. Write φ(v) = r(v)·v̂ with r(v) = ‖φ(v)‖₂ and v̂ ∈ S^{D-1}.
 
-**(A3') Residual angular-degree correlation (revised).**
-Even after conditioning on norm, a positive correlation persists between degree and angular proximity to the distributional mean direction:
+**(A3a) Degree-mean alignment.**
+Higher-degree nodes are angularly closer to the distributional mean direction μ̂, even after conditioning on norm:
 
-    β = ρ(deg(v), cos(v̂, μ̂) | r(v)) > 0
+    β = corr(deg(v), cos(v̂, μ̂) | r(v)) > 0
 
-on heterogeneous real graphs (measured range β ∈ [+0.05, +0.19] across encoders and domains). Consequently the pure conditional isotropy assumption is violated; the angular coordinate itself carries degree information. Cosine selection, being purely directional, is therefore mildly degree-averse. The effective drainage attractor is
+Measured range β ∈ [+0.05, +0.19] across encoders and domains. This is a systematic property of trained transformer embeddings: general concepts appear in many training contexts, pulling their directions toward the distributional mean (context-averaging effect).
 
-    ρ_eff(β) = ρ · exp(-|β|√D_eff) < ρ
+**(A3b) Target-relative hub disadvantage.**
+For the target distribution and frontier dynamics induced by the traversal policy, high-degree candidates are systematically cosine-disadvantaged relative to lower-degree candidates:
 
-(The radial contribution to degree may be large or negligible according to the encoder; the residual angular coupling β is systematic.)
+    Δ_hub(t, i) = E[cos(û, t̂) | u ∈ F_i, k_u high] - E[cos(û, t̂) | u ∈ F_i, k_u low] < 0
+
+This condition holds when targets are distributed as deviations from the mean direction μ̂ (which is the generic case for specific queries on trained embeddings, since the mean represents the "average of everything" while each target represents a specific concept). A3b is the policy-relevant condition that determines the sign of drainage.
+
+**Critical distinction (Experiment 31).** A3a alone (scalar β > 0) does NOT guarantee drainage. When degree-direction coupling is injected via an arbitrary fixed direction (not the distributional mean), increasing β produces ANTI-drainage (ρ(β, T3) = +0.73 on SBM). Drainage requires the specific geometry where the degree-associated direction IS the distributional mean, and targets deviate FROM that mean. A3a provides the geometric structure; A3b provides the directional asymmetry that converts it into drainage.
+
+**Effective attractor.** Under A3a + A3b, the drainage attractor is:
+
+    ρ_eff = ρ · exp(-|β| √D_eff) < ρ
+
+This is an empirically fitted formula; the exponential form and √D_eff scaling match the observed drainage floor across encoders but are not derived from a generative model.
 
 **(A4) Sublinear nearest-neighbor degree.**
 The average nearest-neighbor degree satisfies k̄_nn(d) < d for all d > d*, where d* is the unique fixed point of k̄_nn. For uncorrelated (rank-one) networks, k̄_nn(d) = ρ (constant).
@@ -249,7 +260,8 @@ Drainage vanishes if and only if Var(k) = 0 (regular graph). All other regimes m
 
 | Component | Status | Epistemic Category |
 |-----------|--------|-------------------|
-| Residual angular-degree correlation beta (revised A3') | Measured, encoder-independent, systematic on real graphs | Empirically fitted |
+| A3a: Degree-mean alignment (beta > 0) | Measured on all real graphs + both encoders (beta +0.05 to +0.19) | Empirically confirmed |
+| A3b: Target-relative hub disadvantage | Required for drainage; falsified for arbitrary-direction injection (Exp 31: rho(beta,T3)=+0.73 without mean alignment) | Empirically confirmed on real encoders; falsified for arbitrary injection |
 | Drainage to size-biased mean (rank-one) | Formally proved (size-biased sampling + directional selection) | Formally proved |
 | rho_eff = rho * exp(-\|beta\| * sqrt(D_eff)) | Matches observed attractor; exponential form and sqrt(D_eff) scaling are fitted | Empirically fitted |
 | Drainage recurrence (assortative) | Conditional on rank-one + measured assortativity | Conditional result |
@@ -322,4 +334,6 @@ precise boundary of the theorem's applicability.
 
 ---
 
-*Revised 17 August 2026. Two-layer structure: the Rank-One Cosine Drainage Theorem (proved under Chung-Lu model with β > 0) and the broader Cosine Drainage Conjecture (supported by six graph families, two encoders, not formally proved beyond rank-one). Incorporates systematic residual angular-degree correlation, effective attractor ρ_eff(β), justified tree bound for cosine, scissors model of alignment probability, and bottleneck-dependent waypoint spacing rule. This is a conditional formal account with a mixture of derived, fitted, and empirically calibrated quantities. Boundary-search program specified for future counterexample testing.*
+*FROZEN 17 August 2026. This is the final version of the Cosine Drainage Theorem document for this research phase. Two-layer structure: the Rank-One Cosine Drainage Theorem (proved under Chung-Lu model with A3a + A3b) and the broader Cosine Drainage Conjecture (supported by 15 graph families, two encoders). A3' has been split into A3a (degree-mean alignment, necessary but not sufficient) and A3b (target-relative hub disadvantage, the policy-relevant condition). Experiment 31 falsified the simple β > 0 ⟹ drainage implication and identified mean-directed coupling as the operative geometry. Multi-Anchor search is an empirically robust intervention across all 15 tested families regardless of whether drainage, weak drainage, or anti-drainage is active. Experiment manifest frozen; no further exploratory experiments without pre-registration.*
+
+*Thesis: Embedding geometry and graph topology jointly determine greedy traversal degree dynamics; target-relative hub disadvantage produces drainage, while other topology-geometry alignments can produce anti-drainage. Multi-Anchor search is empirically robust across both regimes.*
