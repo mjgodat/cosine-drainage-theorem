@@ -1,0 +1,271 @@
+{
+  "experiment": "exp24_second_hypothesis_set",
+  "description": "Replication of waypoint injection on independent Hypothesis Set 2",
+  "budget_H": 100,
+  "n_hypotheses_attempted": 9,
+  "n_hypotheses_resolved": 8,
+  "n_hypotheses_skipped": 1,
+  "skipped_hypotheses": {
+    "#26 Tissue-Recon": "only 2 waypoints resolved (no intermediates possible)"
+  },
+  "n_total_intermediates": 13,
+  "headline_numbers": {
+    "cos_mean_rate": 25.0,
+    "multi_mean_rate": 12.5,
+    "wp_mean_rate": 100.0
+  },
+  "budget_accounting": {
+    "cos_mean_nodes": 100.0,
+    "multi_mean_nodes": 87.0,
+    "wp_mean_nodes": 63.875,
+    "cos_total_nodes": 800,
+    "multi_total_nodes": 696,
+    "wp_total_nodes": 511,
+    "wp_to_cos_ratio": 0.63875
+  },
+  "bootstrap_ci_95": {
+    "n_replicates": 1000,
+    "cosine": {
+      "mean": 25.0,
+      "ci_lo": 0.0,
+      "ci_hi": 50.312499999999716
+    },
+    "multi": {
+      "mean": 12.525,
+      "ci_lo": 0.0,
+      "ci_hi": 37.5
+    },
+    "waypoint": {
+      "mean": 100.0,
+      "ci_lo": 100.0,
+      "ci_hi": 100.0
+    },
+    "difference_wp_minus_cos": {
+      "mean": 75.0,
+      "ci_lo": 49.687500000000014,
+      "ci_hi": 100.0,
+      "excludes_zero": true
+    },
+    "wp_ci_degenerate": true
+  },
+  "mcnemar_cos_vs_wp": {
+    "concordant": 2,
+    "discordant_b_cos_found_wp_missed": 0,
+    "discordant_c_wp_found_cos_missed": 11,
+    "total_discordant": 11,
+    "p_value": 0.0009765625,
+    "significant_alpha_05": true
+  },
+  "mcnemar_multi_vs_wp": {
+    "concordant": 1,
+    "discordant_b_multi_found_wp_missed": 0,
+    "discordant_c_wp_found_multi_missed": 12,
+    "total_discordant": 12,
+    "p_value": 0.00048828125,
+    "significant_alpha_05": true
+  },
+  "per_hypothesis": {
+    "#10 Thromboinflammation": {
+      "n_intermediates": 2,
+      "n_waypoints": 4,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 93,
+      "multi_rate": 0.0,
+      "wp_found": 2,
+      "wp_visited": 64,
+      "wp_rate": 100.0
+    },
+    "#22 OCD-HPA": {
+      "n_intermediates": 2,
+      "n_waypoints": 4,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 51,
+      "multi_rate": 0.0,
+      "wp_found": 2,
+      "wp_visited": 50,
+      "wp_rate": 100.0
+    },
+    "#28 C9orf72": {
+      "n_intermediates": 2,
+      "n_waypoints": 4,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 79,
+      "multi_rate": 0.0,
+      "wp_found": 2,
+      "wp_visited": 65,
+      "wp_rate": 100.0
+    },
+    "#33 ECT-SHANK3": {
+      "n_intermediates": 2,
+      "n_waypoints": 4,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 100,
+      "multi_rate": 0.0,
+      "wp_found": 2,
+      "wp_visited": 66,
+      "wp_rate": 100.0
+    },
+    "#36 PWS-OXT": {
+      "n_intermediates": 2,
+      "n_waypoints": 4,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 98,
+      "multi_rate": 0.0,
+      "wp_found": 2,
+      "wp_visited": 54,
+      "wp_rate": 100.0
+    },
+    "#9 PANoptosis": {
+      "n_intermediates": 1,
+      "n_waypoints": 3,
+      "cos_found": 1,
+      "cos_visited": 100,
+      "cos_rate": 100.0,
+      "multi_found": 1,
+      "multi_visited": 87,
+      "multi_rate": 100.0,
+      "wp_found": 1,
+      "wp_visited": 73,
+      "wp_rate": 100.0
+    },
+    "#30 MSA-Cardiac": {
+      "n_intermediates": 1,
+      "n_waypoints": 3,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 92,
+      "multi_rate": 0.0,
+      "wp_found": 1,
+      "wp_visited": 66,
+      "wp_rate": 100.0
+    },
+    "#31 Xanomeline-Smoking": {
+      "n_intermediates": 1,
+      "n_waypoints": 3,
+      "cos_found": 1,
+      "cos_visited": 100,
+      "cos_rate": 100.0,
+      "multi_found": 0,
+      "multi_visited": 96,
+      "multi_rate": 0.0,
+      "wp_found": 1,
+      "wp_visited": 73,
+      "wp_rate": 100.0
+    }
+  },
+  "per_intermediate_detail": [
+    {
+      "hypothesis": "#10 Thromboinflammation",
+      "intermediate": "colchicine",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#10 Thromboinflammation",
+      "intermediate": "nlrp3",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#22 OCD-HPA",
+      "intermediate": "circuitry",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#22 OCD-HPA",
+      "intermediate": "compulsion",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#28 C9orf72",
+      "intermediate": "ftd",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#28 C9orf72",
+      "intermediate": "rna-binding protein",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#33 ECT-SHANK3",
+      "intermediate": "autism",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#33 ECT-SHANK3",
+      "intermediate": "shank3",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#36 PWS-OXT",
+      "intermediate": "seeking",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#36 PWS-OXT",
+      "intermediate": "sociability",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#9 PANoptosis",
+      "intermediate": "pyroptosis",
+      "cos_found": true,
+      "multi_found": true,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#30 MSA-Cardiac",
+      "intermediate": "alpha-synuclein",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#31 Xanomeline-Smoking",
+      "intermediate": "addiction",
+      "cos_found": true,
+      "multi_found": false,
+      "wp_found": true
+    }
+  ],
+  "replication_verdict": {
+    "wp_mean_rate": 100.0,
+    "replicates_100": true,
+    "replicates_90_plus": true
+  }
+}

@@ -1,0 +1,434 @@
+[
+  {
+    "name": "PRSM Crystal",
+    "N": 39220,
+    "D": 768,
+    "edges": 116916,
+    "mean_degree": 26.62957137239481,
+    "max_degree": 1359,
+    "degree_cv": 2.6938188814871253,
+    "power_law_alpha": 1.1620603276318926,
+    "clustering_coeff": 0.6140111784104463,
+    "n_components": 14,
+    "largest_component": 5057,
+    "est_diameter": 7,
+    "avg_eccentricity": 6.34,
+    "n_types": 1,
+    "type_entropy": 0.0,
+    "gamma": 0.24859601477270477,
+    "edge_cos_mean": 0.45993886213868856,
+    "edge_cos_std": 0.09028984243841189,
+    "sw_cc_ratio": 904.3149091848128,
+    "classification": "SCALE-FREE",
+    "orc_cos_spearman": -0.9638354424556818,
+    "orc_cos_p": 0.0,
+    "orc_diagonal_pct": 7.6,
+    "orc_mean": -0.07335206236314107,
+    "orc_std": 0.3031617122531892,
+    "orc_pct_negative": 55.059999999999995,
+    "conductance_mean": 0.7557673575011997,
+    "conductance_std": 0.12292419595100074,
+    "conductance_median": 0.7736269157232722,
+    "lid_mean": 23.67536570906639,
+    "lid_std": 12.424194987130331,
+    "network_mi": {
+      "5": {
+        "mi": -0.015538353796408133,
+        "tp": 39,
+        "fp": 9961,
+        "fn": 6843,
+        "overlap_pct": 0.2315364521491332
+      },
+      "10": {
+        "mi": -0.013794421133291226,
+        "tp": 57,
+        "fp": 19943,
+        "fn": 6825,
+        "overlap_pct": 0.21248042943413106
+      },
+      "20": {
+        "mi": -0.011598785526804637,
+        "tp": 90,
+        "fp": 39910,
+        "fn": 6792,
+        "overlap_pct": 0.19233646058171094
+      },
+      "50": {
+        "mi": -0.008104260794141317,
+        "tp": 163,
+        "fp": 99837,
+        "fn": 6719,
+        "overlap_pct": 0.152736131934033
+      },
+      "100": {
+        "mi": -0.005840810050202289,
+        "tp": 257,
+        "fp": 199743,
+        "fn": 6625,
+        "overlap_pct": 0.12437931334875571
+      }
+    },
+    "lid_orc_spearman": 0.31027964978438216,
+    "lid_orc_p": 0.00022429591209917031
+  },
+  {
+    "name": "Cora",
+    "N": 2708,
+    "D": 1433,
+    "edges": 5278,
+    "mean_degree": 3.8980797636632203,
+    "max_degree": 168,
+    "degree_cv": 1.3411265776375811,
+    "power_law_alpha": 1.900292000143858,
+    "clustering_coeff": 0.28934983897158245,
+    "n_components": 78,
+    "largest_component": 2485,
+    "est_diameter": 18,
+    "avg_eccentricity": 12.96,
+    "n_types": 7,
+    "type_entropy": 2.6417426294422204,
+    "gamma": 0.03560878395537237,
+    "edge_cos_mean": 0.16765459703352809,
+    "edge_cos_std": 0.12685544470928256,
+    "sw_cc_ratio": 201.01162917166565,
+    "classification": "HETEROGENEOUS",
+    "orc_cos_spearman": -0.7431625296807487,
+    "orc_cos_p": 0.0,
+    "orc_diagonal_pct": 20.919999999999998,
+    "orc_mean": -0.04896068885967828,
+    "orc_std": 0.627945607990176,
+    "orc_pct_negative": 47.44,
+    "conductance_mean": 0.4821354609063082,
+    "conductance_std": 0.19498387711220977,
+    "conductance_median": 0.4731168981332785,
+    "lid_mean": 60.96948172783851,
+    "lid_std": 63.80952531781168,
+    "network_mi": {
+      "5": {
+        "mi": -0.13466075605246156,
+        "tp": 1048,
+        "fp": 8952,
+        "fn": 6710,
+        "overlap_pct": 6.271318293339716
+      },
+      "10": {
+        "mi": -0.11053883396726989,
+        "tp": 1416,
+        "fp": 18584,
+        "fn": 6342,
+        "overlap_pct": 5.375241999772236
+      },
+      "20": {
+        "mi": -0.07528178502763178,
+        "tp": 1846,
+        "fp": 38154,
+        "fn": 5912,
+        "overlap_pct": 4.020647746825517
+      },
+      "50": {
+        "mi": -0.0370984049587077,
+        "tp": 2530,
+        "fp": 97470,
+        "fn": 5228,
+        "overlap_pct": 2.404280188921305
+      },
+      "100": {
+        "mi": -0.019501467169274426,
+        "tp": 3167,
+        "fp": 196833,
+        "fn": 4591,
+        "overlap_pct": 1.547958864471729
+      }
+    },
+    "lid_orc_spearman": 0.13753958246688253,
+    "lid_orc_p": 8.05027263217288e-10
+  },
+  {
+    "name": "Amazon Computers",
+    "N": 13752,
+    "D": 767,
+    "edges": 245861,
+    "mean_degree": 36.50226412293074,
+    "max_degree": 2992,
+    "degree_cv": 1.94078939241051,
+    "power_law_alpha": 1.5000888805624104,
+    "clustering_coeff": 0.361952750898226,
+    "n_components": 33,
+    "largest_component": 13381,
+    "est_diameter": 9,
+    "avg_eccentricity": 7.46,
+    "n_types": 10,
+    "type_entropy": 2.700047821339319,
+    "gamma": 0.22722541533360574,
+    "edge_cos_mean": 0.4896821197174117,
+    "edge_cos_std": 0.20203016074569352,
+    "sw_cc_ratio": 136.3634379935761,
+    "classification": "HETEROGENEOUS",
+    "orc_cos_spearman": -0.8727938836172258,
+    "orc_cos_p": 0.0,
+    "orc_diagonal_pct": 12.839999999999998,
+    "orc_mean": -0.606833147746107,
+    "orc_std": 4.263070292398414,
+    "orc_pct_negative": 47.8,
+    "conductance_mean": 0.5028745547621739,
+    "conductance_std": 0.23796753920447514,
+    "conductance_median": 0.5144766245543724,
+    "lid_mean": 82.5342053104043,
+    "lid_std": 41.983667465499515,
+    "network_mi": {
+      "5": {
+        "mi": -0.03686146572866859,
+        "tp": 881,
+        "fp": 9119,
+        "fn": 69565,
+        "overlap_pct": 1.1072568685116757
+      },
+      "10": {
+        "mi": -0.05471450997283981,
+        "tp": 1388,
+        "fp": 18612,
+        "fn": 69058,
+        "overlap_pct": 1.558517387349959
+      },
+      "20": {
+        "mi": -0.07257146981995259,
+        "tp": 2206,
+        "fp": 37794,
+        "fn": 68240,
+        "overlap_pct": 2.038044733511331
+      },
+      "50": {
+        "mi": -0.0821997704421056,
+        "tp": 4033,
+        "fp": 95967,
+        "fn": 66413,
+        "overlap_pct": 2.4234739865636303
+      },
+      "100": {
+        "mi": -0.07172067615505993,
+        "tp": 6035,
+        "fp": 193965,
+        "fn": 64411,
+        "overlap_pct": 2.282422885496876
+      }
+    },
+    "lid_orc_spearman": 0.05936713679514638,
+    "lid_orc_p": 0.09626900576345909
+  },
+  {
+    "name": "DBLP",
+    "N": 17716,
+    "D": 1639,
+    "edges": 52867,
+    "mean_degree": 5.96827726349063,
+    "max_degree": 339,
+    "degree_cv": 1.566479240752636,
+    "power_law_alpha": 2.11592024012906,
+    "clustering_coeff": 0.18379767516152795,
+    "n_components": 589,
+    "largest_component": 16191,
+    "est_diameter": 25,
+    "avg_eccentricity": 18.36,
+    "n_types": 4,
+    "type_entropy": 1.769493631696252,
+    "gamma": 0.010085581282887168,
+    "edge_cos_mean": 0.15207550401359796,
+    "edge_cos_std": 0.1831240658016088,
+    "sw_cc_ratio": 545.5778056894794,
+    "classification": "HETEROGENEOUS",
+    "orc_cos_spearman": -0.8835283406348248,
+    "orc_cos_p": 0.0,
+    "orc_diagonal_pct": 5.42,
+    "orc_mean": -0.12290338439041193,
+    "orc_std": 0.4371174153856653,
+    "orc_pct_negative": 47.0,
+    "conductance_mean": 0.5973108942321994,
+    "conductance_std": 0.16968413574854438,
+    "conductance_median": 0.611800578364699,
+    "lid_mean": 95000024.46805589,
+    "lid_std": 4247467006.1286044,
+    "network_mi": {
+      "5": {
+        "mi": -0.08680885237478925,
+        "tp": 546,
+        "fp": 9454,
+        "fn": 10931,
+        "overlap_pct": 2.608446397859736
+      },
+      "10": {
+        "mi": -0.08576722804329893,
+        "tp": 827,
+        "fp": 19173,
+        "fn": 10650,
+        "overlap_pct": 2.698117516557372
+      },
+      "20": {
+        "mi": -0.06803924322661029,
+        "tp": 1143,
+        "fp": 38857,
+        "fn": 10334,
+        "overlap_pct": 2.27078573557167
+      },
+      "50": {
+        "mi": -0.04177093629954725,
+        "tp": 1809,
+        "fp": 98191,
+        "fn": 9668,
+        "overlap_pct": 1.649508977012647
+      },
+      "100": {
+        "mi": -0.02537001266932768,
+        "tp": 2451,
+        "fp": 197549,
+        "fn": 9026,
+        "overlap_pct": 1.1725757916441417
+      }
+    },
+    "lid_orc_spearman": 0.09911020142627584,
+    "lid_orc_p": 0.011027790351944273
+  },
+  {
+    "name": "Synthetic Isotropic",
+    "N": 10000,
+    "D": 768,
+    "edges": 100000,
+    "mean_degree": 36.2376,
+    "max_degree": 2149,
+    "degree_cv": 1.6544869344556379,
+    "power_law_alpha": 1.5531137886584152,
+    "clustering_coeff": 0.04558838496829371,
+    "n_components": 1,
+    "largest_component": 10000,
+    "est_diameter": 4,
+    "avg_eccentricity": 3.12,
+    "n_types": 1,
+    "type_entropy": 0.0,
+    "gamma": -2.555005074178496e-07,
+    "edge_cos_mean": 0.09630576466023923,
+    "edge_cos_std": 0.02140876740227667,
+    "sw_cc_ratio": 12.580409565835957,
+    "classification": "MODULAR",
+    "orc_cos_spearman": -0.9829810297268327,
+    "orc_cos_p": 0.0,
+    "orc_diagonal_pct": 5.800000000000001,
+    "orc_mean": -0.0978016151763018,
+    "orc_std": 0.023383736666177116,
+    "orc_pct_negative": 100.0,
+    "conductance_mean": 0.5853073487611914,
+    "conductance_std": 0.07397263530021218,
+    "conductance_median": 0.5708077238337916,
+    "lid_mean": 134.69319402694703,
+    "lid_std": 29.86654075544673,
+    "network_mi": {
+      "5": {
+        "mi": -0.030767123605405452,
+        "tp": 8036,
+        "fp": 1964,
+        "fn": 61958,
+        "overlap_pct": 11.167470365068997
+      },
+      "10": {
+        "mi": -0.07406259316792123,
+        "tp": 13878,
+        "fp": 6122,
+        "fn": 56116,
+        "overlap_pct": 18.232457926612977
+      },
+      "20": {
+        "mi": -0.13074726842025172,
+        "tp": 22483,
+        "fp": 17517,
+        "fn": 47511,
+        "overlap_pct": 25.691333759941493
+      },
+      "50": {
+        "mi": -0.14010244189460197,
+        "tp": 37443,
+        "fp": 62557,
+        "fn": 32551,
+        "overlap_pct": 28.247782002534855
+      },
+      "100": {
+        "mi": -0.08148652885868699,
+        "tp": 49213,
+        "fp": 150787,
+        "fn": 20781,
+        "overlap_pct": 22.290313521935666
+      }
+    },
+    "lid_orc_spearman": 0.057491298759630494,
+    "lid_orc_p": 0.06578355954865474
+  },
+  {
+    "name": "Synthetic Mixture",
+    "N": 10000,
+    "D": 768,
+    "edges": 100000,
+    "mean_degree": 35.5924,
+    "max_degree": 1720,
+    "degree_cv": 1.3427814341941668,
+    "power_law_alpha": 1.7475475629583954,
+    "clustering_coeff": 0.06578752119114421,
+    "n_components": 3,
+    "largest_component": 7000,
+    "est_diameter": 3,
+    "avg_eccentricity": 3.0,
+    "n_types": 3,
+    "type_entropy": 1.156779649014231,
+    "gamma": 0.4294454979978347,
+    "edge_cos_mean": 0.9657279040801525,
+    "edge_cos_std": 0.0011226096810517902,
+    "sw_cc_ratio": 18.4835867182725,
+    "classification": "MODULAR",
+    "orc_cos_spearman": -0.8238621357491119,
+    "orc_cos_p": 0.0,
+    "orc_diagonal_pct": 18.48,
+    "orc_mean": -0.09106296002420906,
+    "orc_std": 0.04678499967061728,
+    "orc_pct_negative": 98.76,
+    "conductance_mean": 0.3981786497472378,
+    "conductance_std": 0.16892907602834728,
+    "conductance_median": 0.434482180376507,
+    "lid_mean": 121.30968000030518,
+    "lid_std": 29.739125172994033,
+    "network_mi": {
+      "5": {
+        "mi": -0.0013060447868670432,
+        "tp": 9924,
+        "fp": 76,
+        "fn": 61882,
+        "overlap_pct": 13.805767705855349
+      },
+      "10": {
+        "mi": -0.009797244759134559,
+        "tp": 19311,
+        "fp": 689,
+        "fn": 52495,
+        "overlap_pct": 26.637331714853236
+      },
+      "20": {
+        "mi": -0.055091866733828335,
+        "tp": 33606,
+        "fp": 6394,
+        "fn": 38200,
+        "overlap_pct": 42.973875014386
+      },
+      "50": {
+        "mi": -0.11354708809384706,
+        "tp": 46067,
+        "fp": 53933,
+        "fn": 25739,
+        "overlap_pct": 36.636710672816925
+      },
+      "100": {
+        "mi": -0.07761877428835531,
+        "tp": 52094,
+        "fp": 147906,
+        "fn": 19712,
+        "overlap_pct": 23.710021710140047
+      }
+    },
+    "lid_orc_spearman": -0.059920016571335166,
+    "lid_orc_p": 0.046539690364891605
+  }
+]

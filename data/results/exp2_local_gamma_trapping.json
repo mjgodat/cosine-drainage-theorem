@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Cora",
+    "n_pairs": 2000,
+    "n_reached": 65,
+    "auc": 0.9670204730669847,
+    "coefficients": {
+      "gamma_local": -0.29572764113396416,
+      "degree_source": -0.21415554203852716,
+      "graph_dist": -3.532309480156384,
+      "angular_dist": -0.23488998464691468
+    },
+    "intercept": -6.844746222356714
+  },
+  {
+    "name": "Amazon Computers",
+    "n_pairs": 2000,
+    "n_reached": 23,
+    "auc": 0.926964438873128,
+    "coefficients": {
+      "gamma_local": 0.003338820148456741,
+      "degree_source": -0.27919814864481357,
+      "graph_dist": -2.532689995665159,
+      "angular_dist": -0.22544873850823266
+    },
+    "intercept": -6.418252919403793
+  },
+  {
+    "name": "DBLP",
+    "n_pairs": 2000,
+    "n_reached": 26,
+    "auc": 0.9713779128672746,
+    "coefficients": {
+      "gamma_local": -0.2468578283500824,
+      "degree_source": -0.5129230121790173,
+      "graph_dist": -3.2688365142274036,
+      "angular_dist": -0.31273026436453727
+    },
+    "intercept": -7.382414850376356
+  }
+]

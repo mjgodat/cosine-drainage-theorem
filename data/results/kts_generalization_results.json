@@ -1,0 +1,382 @@
+{
+  "Cora": {
+    "A: kNN local": {
+      "n": 500,
+      "momentum_mean": -0.40181051694452763,
+      "momentum_std": 0.06403571281944999,
+      "tortuosity_mean": 0.30807215238992136,
+      "tortuosity_std": 0.043308122932087335,
+      "tav_mag_mean": 0.9902427820478167,
+      "tav_mag_std": 0.1685194959977133,
+      "eccentricity_mean": 1.106939302664228,
+      "eccentricity_std": 0.2218855369580621,
+      "sat_alpha_mean": 1.79,
+      "sat_alpha_std": 0.8910106621135352,
+      "pvals_vs_random": {
+        "momentum": 1.0723797135793387e-110,
+        "tortuosity": 7.769840656290014e-160,
+        "tav_mag": 4.099576110399848e-164,
+        "eccentricity": 9.239788339470394e-165,
+        "sat_alpha": 0.0004956572439842259
+      }
+    },
+    "B: graph walks": {
+      "n": 500,
+      "momentum_mean": -0.6313405313998461,
+      "momentum_std": 0.14505718886877858,
+      "tortuosity_mean": 0.15373396796505037,
+      "tortuosity_std": 0.05857880515225656,
+      "tav_mag_mean": 2.4688293075561525,
+      "tav_mag_std": 0.4471499345039501,
+      "eccentricity_mean": 862896.972618763,
+      "eccentricity_std": 5005454.857833382,
+      "sat_alpha_mean": 1.962,
+      "sat_alpha_std": 1.2229292702360182,
+      "pvals_vs_random": {
+        "momentum": 4.4596526310682557e-70,
+        "tortuosity": 0.5136506355535244,
+        "tav_mag": 1.252286353126383e-114,
+        "eccentricity": 4.255339132054173e-137,
+        "sat_alpha": 0.904849289381922
+      }
+    },
+    "C: cross-class": {
+      "n": 500,
+      "momentum_mean": -0.38584362718462945,
+      "momentum_std": 0.06073399233017274,
+      "tortuosity_mean": 0.3204251265156264,
+      "tortuosity_std": 0.05016951076657899,
+      "tav_mag_mean": 1.0177799637658254,
+      "tav_mag_std": 0.15360120168008748,
+      "eccentricity_mean": 1.1564333456369271,
+      "eccentricity_std": 0.2564597382067291,
+      "sat_alpha_mean": 1.732,
+      "sat_alpha_std": 0.949302902133982,
+      "pvals_vs_random": {
+        "momentum": 6.823563713514132e-147,
+        "tortuosity": 1.8074251416640707e-159,
+        "tav_mag": 6.90456796198088e-165,
+        "eccentricity": 9.184530791550734e-165,
+        "sat_alpha": 3.5412190259271523e-12
+      }
+    },
+    "C2: antipodal": {
+      "n": 500,
+      "momentum_mean": -0.3488001539587975,
+      "momentum_std": 0.050059795897950794,
+      "tortuosity_mean": 0.2976637364611155,
+      "tortuosity_std": 0.02918625088370996,
+      "tav_mag_mean": 1.572646195275443,
+      "tav_mag_std": 0.2790074379311793,
+      "eccentricity_mean": 1.074645705851323,
+      "eccentricity_std": 0.17477796447935173,
+      "sat_alpha_mean": 2.077,
+      "sat_alpha_std": 1.3658590703289997,
+      "pvals_vs_random": {
+        "momentum": 1.0798445243352568e-151,
+        "tortuosity": 6.446417176493046e-165,
+        "tav_mag": 4.9396927666392e-87,
+        "eccentricity": 5.856242913498941e-165,
+        "sat_alpha": 0.021990993530962365
+      }
+    },
+    "D: random": {
+      "n": 500,
+      "momentum_mean": -0.4936920124530792,
+      "momentum_std": 0.025642510928828147,
+      "tortuosity_mean": 0.16732107324754406,
+      "tortuosity_std": 0.020802086571875784,
+      "tav_mag_mean": 1.8697326499394007,
+      "tav_mag_std": 0.1549780113744596,
+      "eccentricity_mean": 0.5407410835862421,
+      "eccentricity_std": 0.01762154742292499,
+      "sat_alpha_mean": 1.96,
+      "sat_alpha_std": 1.3484806264830058
+    }
+  },
+  "Amazon_Computers": {
+    "A: kNN local": {
+      "n": 500,
+      "momentum_mean": -0.37759184281304475,
+      "momentum_std": 0.10417259526663139,
+      "tortuosity_mean": 0.33409153664055435,
+      "tortuosity_std": 0.11577864097878339,
+      "tav_mag_mean": 9.68108887754168,
+      "tav_mag_std": 10.210752031479437,
+      "eccentricity_mean": 1.120078867723402,
+      "eccentricity_std": 0.5549962700462948,
+      "sat_alpha_mean": 2.172,
+      "sat_alpha_std": 2.009581050866075,
+      "pvals_vs_random": {
+        "momentum": 2.93458293178337e-69,
+        "tortuosity": 2.590341759868114e-147,
+        "tav_mag": 1.6791081895414478e-28,
+        "eccentricity": 9.169000552535993e-31,
+        "sat_alpha": 3.9575375100092922e-146
+      }
+    },
+    "B: graph walks": {
+      "n": 500,
+      "momentum_mean": -0.5188165286682546,
+      "momentum_std": 0.111864592107817,
+      "tortuosity_mean": 0.16973856584969063,
+      "tortuosity_std": 0.045717391583227567,
+      "tav_mag_mean": 14.25715438079834,
+      "tav_mag_std": 3.45193796344218,
+      "eccentricity_mean": 92019.19134994986,
+      "eccentricity_std": 1204864.4007590462,
+      "sat_alpha_mean": 6.517,
+      "sat_alpha_std": 3.4050273126657884,
+      "pvals_vs_random": {
+        "momentum": 0.00028714429415797736,
+        "tortuosity": 0.11976984001733358,
+        "tav_mag": 1.9385532419681335e-51,
+        "eccentricity": 9.675449496862771e-12,
+        "sat_alpha": 3.153812479853965e-17
+      }
+    },
+    "C: cross-class": {
+      "n": 500,
+      "momentum_mean": -0.3750185504870489,
+      "momentum_std": 0.098497236299078,
+      "tortuosity_mean": 0.22548283135696617,
+      "tortuosity_std": 0.08275070184215,
+      "tav_mag_mean": 9.5972019770486,
+      "tav_mag_std": 4.980996520884543,
+      "eccentricity_mean": 0.9889644780054998,
+      "eccentricity_std": 0.30951467251448106,
+      "sat_alpha_mean": 6.263,
+      "sat_alpha_std": 3.900683401661817,
+      "pvals_vs_random": {
+        "momentum": 5.303631917020496e-71,
+        "tortuosity": 2.0035857742106813e-36,
+        "tav_mag": 5.2714537482549706e-14,
+        "eccentricity": 1.126467042701468e-12,
+        "sat_alpha": 2.1141981644810734e-19
+      }
+    },
+    "C2: antipodal": {
+      "n": 500,
+      "momentum_mean": -0.37721917212754486,
+      "momentum_std": 0.05348525992264137,
+      "tortuosity_mean": 0.3191139057116642,
+      "tortuosity_std": 0.05240808633285748,
+      "tav_mag_mean": 4.82759531566075,
+      "tav_mag_std": 2.7800156359982964,
+      "eccentricity_mean": 1.130983056550523,
+      "eccentricity_std": 0.520930224799402,
+      "sat_alpha_mean": 3.865,
+      "sat_alpha_std": 3.543906742565329,
+      "pvals_vs_random": {
+        "momentum": 3.3750514544619074e-101,
+        "tortuosity": 7.115205893484055e-162,
+        "tav_mag": 3.52563322013256e-118,
+        "eccentricity": 2.990831802874976e-50,
+        "sat_alpha": 4.845939804230853e-78
+      }
+    },
+    "D: random": {
+      "n": 500,
+      "momentum_mean": -0.4911729580938816,
+      "momentum_std": 0.08238534107791085,
+      "tortuosity_mean": 0.1656803900090717,
+      "tortuosity_std": 0.03890562070281414,
+      "tav_mag_mean": 10.90984588950021,
+      "tav_mag_std": 2.604187704082144,
+      "eccentricity_mean": 0.8487720191896533,
+      "eccentricity_std": 0.16785904788983647,
+      "sat_alpha_mean": 8.259,
+      "sat_alpha_std": 2.861366631524174
+    }
+  },
+  "DBLP": {
+    "A: kNN local": {
+      "n": 500,
+      "momentum_mean": -0.07889869095683097,
+      "momentum_std": 0.12262760272637378,
+      "tortuosity_mean": 0.7130021417601115,
+      "tortuosity_std": 0.27855772181913446,
+      "tav_mag_mean": 0.5469511408805847,
+      "tav_mag_std": 0.32329231328369307,
+      "eccentricity_mean": 74460395.4814412,
+      "eccentricity_std": 92844510.42533518,
+      "sat_alpha_mean": 1.774,
+      "sat_alpha_std": 1.2271609511388468,
+      "pvals_vs_random": {
+        "momentum": 2.9191246817694363e-161,
+        "tortuosity": 1.7523802166624028e-161,
+        "tav_mag": 3.467561361964868e-73,
+        "eccentricity": 6.007512256010456e-162,
+        "sat_alpha": 2.8087424344259476e-09
+      }
+    },
+    "B: graph walks": {
+      "n": 500,
+      "momentum_mean": -0.6036498894721269,
+      "momentum_std": 0.16100503161055227,
+      "tortuosity_mean": 0.1582846167267294,
+      "tortuosity_std": 0.05978626728313586,
+      "tav_mag_mean": 1.2448726713997975,
+      "tav_mag_std": 0.27151537061768694,
+      "eccentricity_mean": 869824.0500109214,
+      "eccentricity_std": 4039445.6309377705,
+      "sat_alpha_mean": 2.254,
+      "sat_alpha_std": 1.4196774281504938,
+      "pvals_vs_random": {
+        "momentum": 8.510379020221658e-35,
+        "tortuosity": 0.01407737478406193,
+        "tav_mag": 1.2404240654156658e-124,
+        "eccentricity": 3.2876251451504013e-82,
+        "sat_alpha": 2.2174722007338584e-10
+      }
+    },
+    "C: cross-class": {
+      "n": 500,
+      "momentum_mean": -0.23232579844594,
+      "momentum_std": 0.07316531511615398,
+      "tortuosity_mean": 0.2892459157532679,
+      "tortuosity_std": 0.08287347550664872,
+      "tav_mag_mean": 0.6829885328156609,
+      "tav_mag_std": 0.1754764094219483,
+      "eccentricity_mean": 320714.10807437357,
+      "eccentricity_std": 7164191.641389361,
+      "sat_alpha_mean": 2.043,
+      "sat_alpha_std": 1.640625185714275,
+      "pvals_vs_random": {
+        "momentum": 9.21587102370155e-163,
+        "tortuosity": 1.983524325990271e-130,
+        "tav_mag": 9.113740463429295e-92,
+        "eccentricity": 3.163925101467736e-151,
+        "sat_alpha": 0.2499150648808759
+      }
+    },
+    "C2: antipodal": {
+      "n": 500,
+      "momentum_mean": -0.3184231306731701,
+      "momentum_std": 0.09847477917625698,
+      "tortuosity_mean": 0.3180254582018989,
+      "tortuosity_std": 0.03799717306036551,
+      "tav_mag_mean": 1.026992420060294,
+      "tav_mag_std": 0.16909372431175584,
+      "eccentricity_mean": 1.0755571150364285,
+      "eccentricity_std": 0.16272880161917075,
+      "sat_alpha_mean": 2.131,
+      "sat_alpha_std": 1.3701602096105403,
+      "pvals_vs_random": {
+        "momentum": 1.6303356212770585e-137,
+        "tortuosity": 6.105005276187442e-165,
+        "tav_mag": 4.356569308142793e-45,
+        "eccentricity": 5.856242913498941e-165,
+        "sat_alpha": 4.4559118862102206e-05
+      }
+    },
+    "D: random": {
+      "n": 500,
+      "momentum_mean": -0.49503613758981224,
+      "momentum_std": 0.02824834820379927,
+      "tortuosity_mean": 0.16809741215187748,
+      "tortuosity_std": 0.023516201807976346,
+      "tav_mag_mean": 0.8960033938544137,
+      "tav_mag_std": 0.07950331666650645,
+      "eccentricity_mean": 0.5734919275534471,
+      "eccentricity_std": 0.034159548477641744,
+      "sat_alpha_mean": 2.422,
+      "sat_alpha_std": 2.248091635143016
+    }
+  },
+  "Grid_Road": {
+    "A: kNN local": {
+      "n": 500,
+      "momentum_mean": -0.03841609371826635,
+      "momentum_std": 0.3008831868883299,
+      "tortuosity_mean": 0.35025069165948236,
+      "tortuosity_std": 0.1583476307379396,
+      "tav_mag_mean": 0.10525788744858333,
+      "tav_mag_std": 0.010890387932373645,
+      "eccentricity_mean": 1.533367665182878,
+      "eccentricity_std": 0.40547084656695026,
+      "sat_alpha_mean": 1.723,
+      "sat_alpha_std": 0.5383038175603068,
+      "pvals_vs_random": {
+        "momentum": 2.931678418428164e-120,
+        "tortuosity": 1.5772109829315434e-82,
+        "tav_mag": 5.856242913498941e-165,
+        "eccentricity": 5.856242913498941e-165,
+        "sat_alpha": 1.604592024910429e-07
+      }
+    },
+    "B: graph walks": {
+      "n": 500,
+      "momentum_mean": -0.031073905752965855,
+      "momentum_std": 0.31318162713325676,
+      "tortuosity_mean": 0.33826323270458764,
+      "tortuosity_std": 0.18406127198392036,
+      "tav_mag_mean": 0.11064965878214156,
+      "tav_mag_std": 0.011519792660944812,
+      "eccentricity_mean": 2.0716912080966003,
+      "eccentricity_std": 3.256223180989727,
+      "sat_alpha_mean": 1.668,
+      "sat_alpha_std": 0.49575800548251364,
+      "pvals_vs_random": {
+        "momentum": 1.038747459493779e-133,
+        "tortuosity": 3.4682874778309837e-100,
+        "tav_mag": 5.856242913498941e-165,
+        "eccentricity": 5.856242913498941e-165,
+        "sat_alpha": 2.402054910859385e-10
+      }
+    },
+    "C: cross-class": {
+      "n": 500,
+      "momentum_mean": -0.47893954826761037,
+      "momentum_std": 0.057951981619555705,
+      "tortuosity_mean": 0.17114997198472598,
+      "tortuosity_std": 0.018422506627362233,
+      "tav_mag_mean": 0.04350945333072117,
+      "tav_mag_std": 0.005952847380815848,
+      "eccentricity_mean": 0.5849670118147392,
+      "eccentricity_std": 0.07973809722698723,
+      "sat_alpha_mean": 2.332,
+      "sat_alpha_std": 2.0481152311332487,
+      "pvals_vs_random": {
+        "momentum": 0.00026307372087427765,
+        "tortuosity": 0.0008015800423986549,
+        "tav_mag": 0.12814193517777311,
+        "eccentricity": 0.029859527160631585,
+        "sat_alpha": 0.27977702891522727
+      }
+    },
+    "C2: antipodal": {
+      "n": 500,
+      "momentum_mean": -0.21463979367275604,
+      "momentum_std": 0.33668272619580925,
+      "tortuosity_mean": 0.6136043179438354,
+      "tortuosity_std": 0.06344552330568322,
+      "tav_mag_mean": 0.07538931660992759,
+      "tav_mag_std": 0.004831247435131459,
+      "eccentricity_mean": 3.929000712723381,
+      "eccentricity_std": 0.8208865420856367,
+      "sat_alpha_mean": 2.039,
+      "sat_alpha_std": 1.4342172080964584,
+      "pvals_vs_random": {
+        "momentum": 2.243655840783165e-60,
+        "tortuosity": 5.856242913498941e-165,
+        "tav_mag": 5.856242913498941e-165,
+        "eccentricity": 5.856242913498941e-165,
+        "sat_alpha": 0.01882866508138497
+      }
+    },
+    "D: random": {
+      "n": 500,
+      "momentum_mean": -0.49765323468268396,
+      "momentum_std": 0.03266616483274946,
+      "tortuosity_mean": 0.16586985660043932,
+      "tortuosity_std": 0.015282930459890999,
+      "tav_mag_mean": 0.04267409341675895,
+      "tav_mag_std": 0.002856706347746166,
+      "eccentricity_mean": 0.5735159053502361,
+      "eccentricity_std": 0.04530217104602734,
+      "sat_alpha_mean": 2.094,
+      "sat_alpha_std": 1.5595396756735624
+    }
+  }
+}

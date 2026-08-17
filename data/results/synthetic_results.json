@@ -1,0 +1,80 @@
+{
+  "1_isotropic": {
+    "nk_skew_euc": 16.162349197410798,
+    "nk_skew_cos": 0.32413146905478896,
+    "norm_mean": 27.707040786743164,
+    "norm_std": 0.6999958157539368,
+    "density_mean": 0.1040035446204245,
+    "lid_mean": 153.02952620010376,
+    "rho_norm_nk": -0.9070927027205603,
+    "rho_norm_density": 0.008397102626590923,
+    "rho_density_lid": -0.18364959400371522,
+    "rho_nk_density": 0.1299653897943149,
+    "rho_norm_capture": -0.16781641891532784
+  },
+  "2_anisotropic": {
+    "nk_skew_euc": 9.03190417517764,
+    "nk_skew_cos": 0.33932211334104023,
+    "norm_mean": 75.31385040283203,
+    "norm_std": 6.580753326416016,
+    "density_mean": 0.34596333338022234,
+    "lid_mean": 41.261809971809384,
+    "rho_norm_nk": -0.9332307535066171,
+    "rho_norm_density": 0.5248715443279007,
+    "rho_density_lid": -0.19460369282516377,
+    "rho_nk_density": -0.336258605150978,
+    "rho_norm_capture": -0.0834511115499055
+  },
+  "3_mixture_unequal": {
+    "nk_skew_euc": 10.49264813309112,
+    "nk_skew_cos": 15.257223927792252,
+    "norm_mean": 86.95488739013672,
+    "norm_std": 2.049527645111084,
+    "density_mean": 0.9098203884482384,
+    "lid_mean": 142.65408409500122,
+    "rho_norm_nk": -0.05827797425435569,
+    "rho_norm_density": 0.6410619413212053,
+    "rho_density_lid": -0.22958875863993003,
+    "rho_nk_density": 0.6064644326391662,
+    "rho_norm_capture": 0.004033073100279987
+  },
+  "4_powerlaw_norm": {
+    "nk_skew_euc": 4.754885003599239,
+    "nk_skew_cos": 0.2895125266533725,
+    "norm_mean": 2.8320090770721436,
+    "norm_std": 6.094210624694824,
+    "density_mean": 0.10400863495469094,
+    "lid_mean": 227.7150243850708,
+    "rho_norm_nk": -0.72388028766682,
+    "rho_norm_density": 0.015815071764136112,
+    "rho_density_lid": -0.0965524731775663,
+    "rho_nk_density": 0.08601627873478171,
+    "rho_norm_capture": -0.20538204675217336
+  },
+  "5_unit_sphere": {
+    "nk_skew_euc": 0.3223179185479516,
+    "nk_skew_cos": 0.3223179185479516,
+    "norm_mean": 1.0,
+    "norm_std": 3.1926063570608676e-08,
+    "density_mean": 0.10405770067870616,
+    "lid_mean": 178.98640961380005,
+    "rho_norm_nk": 0.000401779931545833,
+    "rho_norm_density": -0.007902377805636454,
+    "rho_density_lid": -0.319258389093797,
+    "rho_nk_density": 0.7943542819443141,
+    "rho_norm_capture": -0.008310759416164165
+  },
+  "6_low_intrinsic_dim": {
+    "nk_skew_euc": 5.955090506511728,
+    "nk_skew_cos": 0.4334488748077519,
+    "norm_mean": 27.649534225463867,
+    "norm_std": 2.8693037033081055,
+    "density_mean": 0.4074442585885525,
+    "lid_mean": 31.947660746860503,
+    "rho_norm_nk": -0.9231433355283661,
+    "rho_norm_density": 0.16966574017363426,
+    "rho_density_lid": -0.1971790803867761,
+    "rho_nk_density": 0.054643708515581126,
+    "rho_norm_capture": -0.08413405376244996
+  }
+}

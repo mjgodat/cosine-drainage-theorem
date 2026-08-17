@@ -1,0 +1,50 @@
+{
+  "Cora": {
+    "P1_rho": 0.0908,
+    "P3_rho": 0.1807,
+    "P4_ratio": 1.088,
+    "P5_same": 49,
+    "norm_cv": 0.1959,
+    "pattern": "HUB_ATTRACT"
+  },
+  "Amazon": {
+    "P1_rho": 0.311,
+    "P3_rho": 0.3607,
+    "P4_ratio": 2.539,
+    "P5_same": 0,
+    "norm_cv": 0.403,
+    "pattern": "HUB_ATTRACT"
+  },
+  "DBLP": {
+    "P1_rho": 0.0882,
+    "P3_rho": 0.2236,
+    "P4_ratio": 1.167,
+    "P5_same": 33,
+    "norm_cv": 0.2063,
+    "pattern": "HUB_ATTRACT"
+  },
+  "Synth_Iso": {
+    "P1_rho": -0.0078,
+    "P3_rho": -0.3624,
+    "P4_ratio": 0.806,
+    "P5_same": 82,
+    "norm_cv": 0.0254,
+    "pattern": "NONE"
+  },
+  "Synth_Mix": {
+    "P1_rho": 0.1561,
+    "P3_rho": 0.7867,
+    "P4_ratio": 5.703,
+    "P5_same": 0,
+    "norm_cv": 0.0131,
+    "pattern": "HUB_ATTRACT"
+  },
+  "PRSM": {
+    "P1_rho": 0.1199,
+    "P3_rho": 0.1899,
+    "P4_ratio": 0.469,
+    "P5_same": 81,
+    "norm_cv": 0.0318,
+    "pattern": "MOD_TRAP"
+  }
+}

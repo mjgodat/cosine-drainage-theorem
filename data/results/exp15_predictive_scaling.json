@@ -1,0 +1,40 @@
+{
+  "model1_r2": 0.9245735530795404,
+  "model1_mae": 5.30857092803246,
+  "model1_coefficients": {
+    "gamma": 6.337785555173669,
+    "orc_cos_rho": -0.36461221853810244,
+    "degree_cv": 3.15206444799195,
+    "cc": 4.976841583761154,
+    "edge_cos": 6.380154274482166,
+    "conductance": -1.0680972369508983,
+    "log_budget": 12.727138297388468,
+    "log_N": -0.8767460933082831
+  },
+  "model2_r2_trapping": 0.2524679737183554,
+  "model2_mae_trapping": 5.877763548508669,
+  "simple_model_r2": 0.9200345536054374,
+  "multi_gt_cosine_pct": 94.11764705882352,
+  "cosine_gt_bfs_pct": 100.0,
+  "mmr_lt_cosine_pct": 100.0,
+  "n_graphs": 4,
+  "n_observations": 17,
+  "embedding_families": {
+    "nomic": [
+      "PRSM"
+    ],
+    "native_bow": [
+      "Cora",
+      "DBLP"
+    ],
+    "native_product": [
+      "Amazon"
+    ],
+    "random": [
+      "Synth_Iso"
+    ],
+    "random_clustered": [
+      "Synth_Mix"
+    ]
+  }
+}

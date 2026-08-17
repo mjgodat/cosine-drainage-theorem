@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "The Cosine Drainage Theorem: Why Similarity Search Gets Trapped in High-Dimensional Graph Traversal"
+authors:
+  - family-names: Godat
+    given-names: Michael
+    affiliation: Independent Researcher
+version: 1.0.0
+date-released: 2026-08-17
+url: "https://github.com/mjgodat/cosine-drainage-theorem"
+repository-code: "https://github.com/mjgodat/cosine-drainage-theorem"
+keywords:
+  - cosine similarity
+  - graph traversal
+  - high-dimensional geometry
+  - retrieval-augmented generation
+  - knowledge graphs
+  - friendship paradox
+  - degree drainage
+  - embedding anisotropy
+license: MIT

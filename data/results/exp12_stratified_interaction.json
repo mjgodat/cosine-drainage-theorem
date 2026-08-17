@@ -1,0 +1,11 @@
+{
+  "n_pairs": 500,
+  "budget": 100,
+  "interaction_rho_angular": 0.140468719561526,
+  "interaction_p_angular": 0.0016397610597869534,
+  "interaction_rho_gamma": 0.06876778884770006,
+  "interaction_p_gamma": 0.12462076055086624,
+  "overall_bfs": 8.799999999999999,
+  "overall_cos": 84.0,
+  "overall_bidir": 97.8
+}

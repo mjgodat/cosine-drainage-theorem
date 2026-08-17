@@ -1,0 +1,369 @@
+{
+  "experiment": "exp20_statistical_hygiene",
+  "description": "Statistical verification of Probe C headline numbers with bootstrap CIs, LOO, and McNemar's test",
+  "budget_H": 100,
+  "n_hypotheses": 7,
+  "n_total_intermediates": 25,
+  "headline_numbers": {
+    "cos_mean_rate": 13.333333333333332,
+    "multi_mean_rate": 13.333333333333332,
+    "wp_mean_rate": 100.0
+  },
+  "budget_accounting": {
+    "cos_mean_nodes": 100.0,
+    "multi_mean_nodes": 94.14285714285714,
+    "wp_mean_nodes": 57.285714285714285,
+    "cos_total_nodes": 700,
+    "multi_total_nodes": 659,
+    "wp_total_nodes": 401,
+    "wp_to_cos_ratio": 0.5728571428571428
+  },
+  "bootstrap_ci_95": {
+    "n_replicates": 1000,
+    "cosine": {
+      "mean": 13.24,
+      "ci_lo": 0.0,
+      "ci_hi": 34.285714285714285
+    },
+    "multi": {
+      "mean": 13.24,
+      "ci_lo": 0.0,
+      "ci_hi": 34.285714285714285
+    },
+    "waypoint": {
+      "mean": 100.0,
+      "ci_lo": 100.0,
+      "ci_hi": 100.0
+    },
+    "difference_wp_minus_cos": {
+      "mean": 86.76,
+      "ci_lo": 65.71428571428572,
+      "ci_hi": 100.0,
+      "excludes_zero": true
+    },
+    "wp_ci_degenerate": true
+  },
+  "leave_one_out": {
+    "#1 Cobenfy": {
+      "cos_mean_without": 15.555555555555555,
+      "multi_mean_without": 15.555555555555555,
+      "wp_mean_without": 100.0
+    },
+    "#5 PTSD": {
+      "cos_mean_without": 15.555555555555555,
+      "multi_mean_without": 15.555555555555555,
+      "wp_mean_without": 100.0
+    },
+    "#25 PP2A": {
+      "cos_mean_without": 15.555555555555555,
+      "multi_mean_without": 15.555555555555555,
+      "wp_mean_without": 100.0
+    },
+    "#29 Eden": {
+      "cos_mean_without": 15.555555555555555,
+      "multi_mean_without": 15.555555555555555,
+      "wp_mean_without": 100.0
+    },
+    "#35 Faecal": {
+      "cos_mean_without": 15.555555555555555,
+      "multi_mean_without": 15.555555555555555,
+      "wp_mean_without": 100.0
+    },
+    "#38 TGFBR1": {
+      "cos_mean_without": 10.0,
+      "multi_mean_without": 10.0,
+      "wp_mean_without": 100.0
+    },
+    "#40 Fasting": {
+      "cos_mean_without": 5.5555555555555545,
+      "multi_mean_without": 5.5555555555555545,
+      "wp_mean_without": 100.0
+    }
+  },
+  "mcnemar_cos_vs_wp": {
+    "concordant": 4,
+    "discordant_b_cos_found_wp_missed": 0,
+    "discordant_c_wp_found_cos_missed": 21,
+    "total_discordant": 21,
+    "p_value": 9.5367431640625e-07,
+    "significant_alpha_05": true
+  },
+  "mcnemar_multi_vs_wp": {
+    "concordant": 4,
+    "discordant_b_multi_found_wp_missed": 0,
+    "discordant_c_wp_found_multi_missed": 21,
+    "total_discordant": 21,
+    "p_value": 9.5367431640625e-07,
+    "significant_alpha_05": true
+  },
+  "per_hypothesis": {
+    "#1 Cobenfy": {
+      "n_intermediates": 3,
+      "n_waypoints": 5,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 96,
+      "multi_rate": 0.0,
+      "wp_found": 3,
+      "wp_visited": 61,
+      "wp_rate": 100.0
+    },
+    "#5 PTSD": {
+      "n_intermediates": 3,
+      "n_waypoints": 5,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 87,
+      "multi_rate": 0.0,
+      "wp_found": 3,
+      "wp_visited": 54,
+      "wp_rate": 100.0
+    },
+    "#25 PP2A": {
+      "n_intermediates": 3,
+      "n_waypoints": 5,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 98,
+      "multi_rate": 0.0,
+      "wp_found": 3,
+      "wp_visited": 52,
+      "wp_rate": 100.0
+    },
+    "#29 Eden": {
+      "n_intermediates": 5,
+      "n_waypoints": 7,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 95,
+      "multi_rate": 0.0,
+      "wp_found": 5,
+      "wp_visited": 60,
+      "wp_rate": 100.0
+    },
+    "#35 Faecal": {
+      "n_intermediates": 3,
+      "n_waypoints": 5,
+      "cos_found": 0,
+      "cos_visited": 100,
+      "cos_rate": 0.0,
+      "multi_found": 0,
+      "multi_visited": 96,
+      "multi_rate": 0.0,
+      "wp_found": 3,
+      "wp_visited": 56,
+      "wp_rate": 100.0
+    },
+    "#38 TGFBR1": {
+      "n_intermediates": 3,
+      "n_waypoints": 5,
+      "cos_found": 1,
+      "cos_visited": 100,
+      "cos_rate": 33.33333333333333,
+      "multi_found": 1,
+      "multi_visited": 89,
+      "multi_rate": 33.33333333333333,
+      "wp_found": 3,
+      "wp_visited": 69,
+      "wp_rate": 100.0
+    },
+    "#40 Fasting": {
+      "n_intermediates": 5,
+      "n_waypoints": 7,
+      "cos_found": 3,
+      "cos_visited": 100,
+      "cos_rate": 60.0,
+      "multi_found": 3,
+      "multi_visited": 98,
+      "multi_rate": 60.0,
+      "wp_found": 5,
+      "wp_visited": 49,
+      "wp_rate": 100.0
+    }
+  },
+  "per_intermediate_detail": [
+    {
+      "hypothesis": "#1 Cobenfy",
+      "intermediate": "muscarinic",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#1 Cobenfy",
+      "intermediate": "dopamine",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#1 Cobenfy",
+      "intermediate": "incentive salience",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#5 PTSD",
+      "intermediate": "amygdala",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#5 PTSD",
+      "intermediate": "locus coeruleus",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#5 PTSD",
+      "intermediate": "norepinephrine",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#25 PP2A",
+      "intermediate": "neuronal loss",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#25 PP2A",
+      "intermediate": "neurofibrillary tangles",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#25 PP2A",
+      "intermediate": "pp2a",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#29 Eden",
+      "intermediate": "aryl hydrocarbon receptor",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#29 Eden",
+      "intermediate": "slc7a11",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#29 Eden",
+      "intermediate": "gpx4",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#29 Eden",
+      "intermediate": "glutathione",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#29 Eden",
+      "intermediate": "cystine",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#35 Faecal",
+      "intermediate": "enteric nerve",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#35 Faecal",
+      "intermediate": "alpha-synuclein",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#35 Faecal",
+      "intermediate": "fibrillization",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#38 TGFBR1",
+      "intermediate": "tgf-beta",
+      "cos_found": true,
+      "multi_found": true,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#38 TGFBR1",
+      "intermediate": "smad3",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#38 TGFBR1",
+      "intermediate": "alpha-sma",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#40 Fasting",
+      "intermediate": "ferroptosis",
+      "cos_found": true,
+      "multi_found": true,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#40 Fasting",
+      "intermediate": "ferritin",
+      "cos_found": true,
+      "multi_found": true,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#40 Fasting",
+      "intermediate": "ncoa4",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#40 Fasting",
+      "intermediate": "gpx4",
+      "cos_found": false,
+      "multi_found": false,
+      "wp_found": true
+    },
+    {
+      "hypothesis": "#40 Fasting",
+      "intermediate": "ferritinophagy",
+      "cos_found": true,
+      "multi_found": true,
+      "wp_found": true
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "angular": {
+    "mean": 1.1800360679626465,
+    "median": 1.1865204572677612,
+    "std": 0.0642266497015953,
+    "mean_over_pi": 0.3756171464859579,
+    "deviation_from_pi_half": 0.3907602588322501
+  },
+  "golden_ratio": {
+    "phi_hits": [],
+    "euc_ang_ratio": 21.107249925749027
+  },
+  "power_law_degree": {
+    "alpha": 0.9029372088928318
+  },
+  "zipf_bind_count": {
+    "exponent": 1.2984539668145434
+  },
+  "benford": {
+    "bind_counts": {
+      "chi2": 0.37484901814658556,
+      "follows": false
+    },
+    "degree": {
+      "chi2": 0.010950511944233382,
+      "follows": false
+    },
+    "embedding_norms": {
+      "chi2": 4.634127610982238,
+      "follows": false
+    },
+    "pca_distances": {
+      "chi2": 0.336387746595304,
+      "follows": false
+    },
+    "angular_distances": {
+      "chi2": 2.2454147117190324,
+      "follows": false
+    }
+  },
+  "fractal": {
+    "dimension": -1.9858838788770858,
+    "box_sizes": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "box_counts": [
+      4,
+      26,
+      174,
+      1024,
+      5385,
+      18513,
+      33380,
+      38349
+    ]
+  },
+  "correlation_dim": {
+    "dimension": 2.285740122729899
+  },
+  "eigenvalues": {
+    "top10": [
+      28.637250900268555,
+      6.33325719833374,
+      5.277289390563965
+    ]
+  },
+  "distributions": {
+    "norm_mean": 22.366453170776367,
+    "norm_std": 0.7105587720870972,
+    "norm_cv": 0.03176895177173202,
+    "pca_norm_mean": 3.359630823135376,
+    "pca_norm_std": 1.4765716791152954
+  },
+  "angular_patterns": {
+    "phi_diff_mean": 0.00145008135586977,
+    "phi_diff_std": 0.0005139187560416758
+  }
+}

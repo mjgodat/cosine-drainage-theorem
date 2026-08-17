@@ -1,0 +1,1140 @@
+{
+  "parameters": {
+    "bfs_hops": 3,
+    "total_budget": 100,
+    "spacings": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "endpoints"
+    ],
+    "d_drain_predicted": 3.5
+  },
+  "per_trace": {
+    "#1 Cobenfy": {
+      "trace_length": 5,
+      "n_intermediates": 3,
+      "waypoint_concepts": [
+        "xanomeline",
+        "muscarinic",
+        "dopamine",
+        "incentive salience",
+        "psychosis"
+      ],
+      "waypoint_degrees": [
+        21,
+        43,
+        520,
+        9,
+        86
+      ],
+      "spacings": {
+        "1": {
+          "n_injected": 5,
+          "injected_concepts": [
+            "xanomeline",
+            "muscarinic",
+            "dopamine",
+            "incentive salience",
+            "psychosis"
+          ],
+          "budget_per_wp": 20,
+          "n_skipped_intermediates": 3,
+          "n_found": 3,
+          "discovery_rate": 100.0,
+          "total_reached": 69
+        },
+        "2": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "xanomeline",
+            "dopamine",
+            "psychosis"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 1,
+          "discovery_rate": 50.0,
+          "total_reached": 81
+        },
+        "3": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "xanomeline",
+            "incentive salience",
+            "psychosis"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 2,
+          "discovery_rate": 100.0,
+          "total_reached": 78
+        },
+        "4": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "xanomeline",
+            "psychosis"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 2,
+          "discovery_rate": 66.67,
+          "total_reached": 84
+        },
+        "endpoints": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "xanomeline",
+            "psychosis"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 2,
+          "discovery_rate": 66.67,
+          "total_reached": 84
+        }
+      },
+      "degree_sequence": [
+        21,
+        43,
+        520,
+        9,
+        86
+      ],
+      "mean_alpha": 5.9284
+    },
+    "#5 PTSD": {
+      "trace_length": 5,
+      "n_intermediates": 3,
+      "waypoint_concepts": [
+        "ptsd",
+        "norepinephrine",
+        "locus coeruleus",
+        "amygdala",
+        "fear extinction"
+      ],
+      "waypoint_degrees": [
+        164,
+        112,
+        106,
+        176,
+        15
+      ],
+      "spacings": {
+        "1": {
+          "n_injected": 5,
+          "injected_concepts": [
+            "ptsd",
+            "norepinephrine",
+            "locus coeruleus",
+            "amygdala",
+            "fear extinction"
+          ],
+          "budget_per_wp": 20,
+          "n_skipped_intermediates": 3,
+          "n_found": 3,
+          "discovery_rate": 100.0,
+          "total_reached": 64
+        },
+        "2": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "ptsd",
+            "locus coeruleus",
+            "fear extinction"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 2,
+          "discovery_rate": 100.0,
+          "total_reached": 73
+        },
+        "3": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "ptsd",
+            "amygdala",
+            "fear extinction"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 0,
+          "discovery_rate": 0.0,
+          "total_reached": 60
+        },
+        "4": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "ptsd",
+            "fear extinction"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 2,
+          "discovery_rate": 66.67,
+          "total_reached": 78
+        },
+        "endpoints": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "ptsd",
+            "fear extinction"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 2,
+          "discovery_rate": 66.67,
+          "total_reached": 78
+        }
+      },
+      "degree_sequence": [
+        164,
+        112,
+        106,
+        176,
+        15
+      ],
+      "mean_alpha": 0.8437
+    },
+    "#25 PP2A": {
+      "trace_length": 5,
+      "n_intermediates": 3,
+      "waypoint_concepts": [
+        "tauopathy",
+        "neuronal loss",
+        "neurofibrillary tangles",
+        "pp2a",
+        "nr2a"
+      ],
+      "waypoint_degrees": [
+        4,
+        5,
+        45,
+        2,
+        8
+      ],
+      "spacings": {
+        "1": {
+          "n_injected": 5,
+          "injected_concepts": [
+            "tauopathy",
+            "neuronal loss",
+            "neurofibrillary tangles",
+            "pp2a",
+            "nr2a"
+          ],
+          "budget_per_wp": 20,
+          "n_skipped_intermediates": 3,
+          "n_found": 3,
+          "discovery_rate": 100.0,
+          "total_reached": 51
+        },
+        "2": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "tauopathy",
+            "neurofibrillary tangles",
+            "nr2a"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 1,
+          "discovery_rate": 50.0,
+          "total_reached": 62
+        },
+        "3": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "tauopathy",
+            "pp2a",
+            "nr2a"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 2,
+          "discovery_rate": 100.0,
+          "total_reached": 62
+        },
+        "4": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "tauopathy",
+            "nr2a"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 3,
+          "discovery_rate": 100.0,
+          "total_reached": 91
+        },
+        "endpoints": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "tauopathy",
+            "nr2a"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 3,
+          "discovery_rate": 100.0,
+          "total_reached": 91
+        }
+      },
+      "degree_sequence": [
+        4,
+        5,
+        45,
+        2,
+        8
+      ],
+      "mean_alpha": 3.5736
+    },
+    "#29 Eden": {
+      "trace_length": 7,
+      "n_intermediates": 5,
+      "waypoint_concepts": [
+        "tryptamine",
+        "aryl hydrocarbon receptor",
+        "slc7a11",
+        "cystine",
+        "glutathione",
+        "gpx4",
+        "ferroptosis"
+      ],
+      "waypoint_degrees": [
+        22,
+        6,
+        11,
+        22,
+        120,
+        41,
+        361
+      ],
+      "spacings": {
+        "1": {
+          "n_injected": 7,
+          "injected_concepts": [
+            "tryptamine",
+            "aryl hydrocarbon receptor",
+            "slc7a11",
+            "cystine",
+            "glutathione",
+            "gpx4",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 14,
+          "n_skipped_intermediates": 5,
+          "n_found": 5,
+          "discovery_rate": 100.0,
+          "total_reached": 55
+        },
+        "2": {
+          "n_injected": 4,
+          "injected_concepts": [
+            "tryptamine",
+            "slc7a11",
+            "glutathione",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 25,
+          "n_skipped_intermediates": 3,
+          "n_found": 2,
+          "discovery_rate": 66.67,
+          "total_reached": 64
+        },
+        "3": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "tryptamine",
+            "cystine",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 4,
+          "n_found": 3,
+          "discovery_rate": 75.0,
+          "total_reached": 81
+        },
+        "4": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "tryptamine",
+            "glutathione",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 4,
+          "n_found": 2,
+          "discovery_rate": 50.0,
+          "total_reached": 70
+        },
+        "endpoints": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "tryptamine",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 5,
+          "n_found": 2,
+          "discovery_rate": 40.0,
+          "total_reached": 90
+        }
+      },
+      "degree_sequence": [
+        22,
+        6,
+        11,
+        22,
+        120,
+        41,
+        361
+      ],
+      "mean_alpha": 3.1179
+    },
+    "#35 Faecal": {
+      "trace_length": 5,
+      "n_intermediates": 3,
+      "waypoint_concepts": [
+        "faecalibacterium",
+        "fibrillization",
+        "enteric nerve",
+        "alpha-synuclein",
+        "dopaminergic neuron"
+      ],
+      "waypoint_degrees": [
+        4,
+        10,
+        1,
+        167,
+        41
+      ],
+      "spacings": {
+        "1": {
+          "n_injected": 5,
+          "injected_concepts": [
+            "faecalibacterium",
+            "fibrillization",
+            "enteric nerve",
+            "alpha-synuclein",
+            "dopaminergic neuron"
+          ],
+          "budget_per_wp": 20,
+          "n_skipped_intermediates": 3,
+          "n_found": 3,
+          "discovery_rate": 100.0,
+          "total_reached": 58
+        },
+        "2": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "faecalibacterium",
+            "enteric nerve",
+            "dopaminergic neuron"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 1,
+          "discovery_rate": 50.0,
+          "total_reached": 77
+        },
+        "3": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "faecalibacterium",
+            "alpha-synuclein",
+            "dopaminergic neuron"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 0,
+          "discovery_rate": 0.0,
+          "total_reached": 77
+        },
+        "4": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "faecalibacterium",
+            "dopaminergic neuron"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 1,
+          "discovery_rate": 33.33,
+          "total_reached": 90
+        },
+        "endpoints": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "faecalibacterium",
+            "dopaminergic neuron"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 1,
+          "discovery_rate": 33.33,
+          "total_reached": 90
+        }
+      },
+      "degree_sequence": [
+        4,
+        10,
+        1,
+        167,
+        41
+      ],
+      "mean_alpha": 42.4614
+    },
+    "#38 TGFBR1": {
+      "trace_length": 5,
+      "n_intermediates": 3,
+      "waypoint_concepts": [
+        "tgfbr1",
+        "alpha-sma",
+        "tgf-beta",
+        "smad3",
+        "transferrin receptor"
+      ],
+      "waypoint_degrees": [
+        5,
+        9,
+        116,
+        21,
+        20
+      ],
+      "spacings": {
+        "1": {
+          "n_injected": 5,
+          "injected_concepts": [
+            "tgfbr1",
+            "alpha-sma",
+            "tgf-beta",
+            "smad3",
+            "transferrin receptor"
+          ],
+          "budget_per_wp": 20,
+          "n_skipped_intermediates": 3,
+          "n_found": 3,
+          "discovery_rate": 100.0,
+          "total_reached": 59
+        },
+        "2": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "tgfbr1",
+            "tgf-beta",
+            "transferrin receptor"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 1,
+          "discovery_rate": 50.0,
+          "total_reached": 78
+        },
+        "3": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "tgfbr1",
+            "smad3",
+            "transferrin receptor"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 2,
+          "n_found": 1,
+          "discovery_rate": 50.0,
+          "total_reached": 82
+        },
+        "4": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "tgfbr1",
+            "transferrin receptor"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 1,
+          "discovery_rate": 33.33,
+          "total_reached": 78
+        },
+        "endpoints": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "tgfbr1",
+            "transferrin receptor"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 3,
+          "n_found": 1,
+          "discovery_rate": 33.33,
+          "total_reached": 78
+        }
+      },
+      "degree_sequence": [
+        5,
+        9,
+        116,
+        21,
+        20
+      ],
+      "mean_alpha": 3.9556
+    },
+    "#40 Fasting": {
+      "trace_length": 7,
+      "n_intermediates": 5,
+      "waypoint_concepts": [
+        "fasting",
+        "ncoa4",
+        "ferritinophagy",
+        "ferritin",
+        "ferroportin",
+        "gpx4",
+        "ferroptosis"
+      ],
+      "waypoint_degrees": [
+        14,
+        12,
+        11,
+        71,
+        9,
+        41,
+        361
+      ],
+      "spacings": {
+        "1": {
+          "n_injected": 7,
+          "injected_concepts": [
+            "fasting",
+            "ncoa4",
+            "ferritinophagy",
+            "ferritin",
+            "ferroportin",
+            "gpx4",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 14,
+          "n_skipped_intermediates": 5,
+          "n_found": 5,
+          "discovery_rate": 100.0,
+          "total_reached": 58
+        },
+        "2": {
+          "n_injected": 4,
+          "injected_concepts": [
+            "fasting",
+            "ferritinophagy",
+            "ferroportin",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 25,
+          "n_skipped_intermediates": 3,
+          "n_found": 3,
+          "discovery_rate": 100.0,
+          "total_reached": 69
+        },
+        "3": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "fasting",
+            "ferritin",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 4,
+          "n_found": 1,
+          "discovery_rate": 25.0,
+          "total_reached": 85
+        },
+        "4": {
+          "n_injected": 3,
+          "injected_concepts": [
+            "fasting",
+            "ferroportin",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 33,
+          "n_skipped_intermediates": 4,
+          "n_found": 2,
+          "discovery_rate": 50.0,
+          "total_reached": 78
+        },
+        "endpoints": {
+          "n_injected": 2,
+          "injected_concepts": [
+            "fasting",
+            "ferroptosis"
+          ],
+          "budget_per_wp": 50,
+          "n_skipped_intermediates": 5,
+          "n_found": 1,
+          "discovery_rate": 20.0,
+          "total_reached": 96
+        }
+      },
+      "degree_sequence": [
+        14,
+        12,
+        11,
+        71,
+        9,
+        41,
+        361
+      ],
+      "mean_alpha": 3.6193
+    }
+  },
+  "summary": {
+    "1": {
+      "mean_discovery_rate": 100.0,
+      "median_discovery_rate": 100.0,
+      "min_discovery_rate": 100.0,
+      "max_discovery_rate": 100.0,
+      "prediction": "HIGH",
+      "per_trace_rates": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    },
+    "2": {
+      "mean_discovery_rate": 66.67,
+      "median_discovery_rate": 50.0,
+      "min_discovery_rate": 50.0,
+      "max_discovery_rate": 100.0,
+      "prediction": "HIGH",
+      "per_trace_rates": [
+        50.0,
+        100.0,
+        50.0,
+        66.67,
+        50.0,
+        50.0,
+        100.0
+      ]
+    },
+    "3": {
+      "mean_discovery_rate": 50.0,
+      "median_discovery_rate": 50.0,
+      "min_discovery_rate": 0.0,
+      "max_discovery_rate": 100.0,
+      "prediction": "HIGH",
+      "per_trace_rates": [
+        100.0,
+        0.0,
+        100.0,
+        75.0,
+        0.0,
+        50.0,
+        25.0
+      ]
+    },
+    "4": {
+      "mean_discovery_rate": 57.14,
+      "median_discovery_rate": 50.0,
+      "min_discovery_rate": 33.33,
+      "max_discovery_rate": 100.0,
+      "prediction": "threshold",
+      "per_trace_rates": [
+        66.67,
+        66.67,
+        100.0,
+        50.0,
+        33.33,
+        33.33,
+        50.0
+      ]
+    },
+    "endpoints": {
+      "mean_discovery_rate": 51.43,
+      "median_discovery_rate": 40.0,
+      "min_discovery_rate": 20.0,
+      "max_discovery_rate": 100.0,
+      "prediction": "collapse",
+      "per_trace_rates": [
+        66.67,
+        66.67,
+        100.0,
+        40.0,
+        33.33,
+        33.33,
+        20.0
+      ]
+    }
+  },
+  "edge_connectivity": {
+    "total_consecutive_edges": 32,
+    "direct_neighbor_edges": 18,
+    "direct_neighbor_pct": 56.25,
+    "bfs1_reachable": 18,
+    "bfs2_reachable": 29,
+    "bfs3_reachable": 32,
+    "bfs3_reachable_pct": 100.0,
+    "hard_gaps": [],
+    "per_trace": {
+      "#1 Cobenfy": [
+        {
+          "src": "xanomeline",
+          "tgt": "muscarinic",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 21,
+          "tgt_deg": 43
+        },
+        {
+          "src": "muscarinic",
+          "tgt": "dopamine",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 43,
+          "tgt_deg": 520
+        },
+        {
+          "src": "dopamine",
+          "tgt": "incentive salience",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 520,
+          "tgt_deg": 9
+        },
+        {
+          "src": "incentive salience",
+          "tgt": "psychosis",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 9,
+          "tgt_deg": 86
+        }
+      ],
+      "#5 PTSD": [
+        {
+          "src": "ptsd",
+          "tgt": "norepinephrine",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 164,
+          "tgt_deg": 112
+        },
+        {
+          "src": "norepinephrine",
+          "tgt": "locus coeruleus",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 112,
+          "tgt_deg": 106
+        },
+        {
+          "src": "locus coeruleus",
+          "tgt": "amygdala",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 106,
+          "tgt_deg": 176
+        },
+        {
+          "src": "amygdala",
+          "tgt": "fear extinction",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 176,
+          "tgt_deg": 15
+        }
+      ],
+      "#25 PP2A": [
+        {
+          "src": "tauopathy",
+          "tgt": "neuronal loss",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 4,
+          "tgt_deg": 5
+        },
+        {
+          "src": "neuronal loss",
+          "tgt": "neurofibrillary tangles",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 5,
+          "tgt_deg": 45
+        },
+        {
+          "src": "neurofibrillary tangles",
+          "tgt": "pp2a",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 45,
+          "tgt_deg": 2
+        },
+        {
+          "src": "pp2a",
+          "tgt": "nr2a",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": false,
+          "bfs3": true,
+          "src_deg": 2,
+          "tgt_deg": 8
+        }
+      ],
+      "#29 Eden": [
+        {
+          "src": "tryptamine",
+          "tgt": "aryl hydrocarbon receptor",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 22,
+          "tgt_deg": 6
+        },
+        {
+          "src": "aryl hydrocarbon receptor",
+          "tgt": "slc7a11",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 6,
+          "tgt_deg": 11
+        },
+        {
+          "src": "slc7a11",
+          "tgt": "cystine",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 11,
+          "tgt_deg": 22
+        },
+        {
+          "src": "cystine",
+          "tgt": "glutathione",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 22,
+          "tgt_deg": 120
+        },
+        {
+          "src": "glutathione",
+          "tgt": "gpx4",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 120,
+          "tgt_deg": 41
+        },
+        {
+          "src": "gpx4",
+          "tgt": "ferroptosis",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 41,
+          "tgt_deg": 361
+        }
+      ],
+      "#35 Faecal": [
+        {
+          "src": "faecalibacterium",
+          "tgt": "fibrillization",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": false,
+          "bfs3": true,
+          "src_deg": 4,
+          "tgt_deg": 10
+        },
+        {
+          "src": "fibrillization",
+          "tgt": "enteric nerve",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 10,
+          "tgt_deg": 1
+        },
+        {
+          "src": "enteric nerve",
+          "tgt": "alpha-synuclein",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 1,
+          "tgt_deg": 167
+        },
+        {
+          "src": "alpha-synuclein",
+          "tgt": "dopaminergic neuron",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 167,
+          "tgt_deg": 41
+        }
+      ],
+      "#38 TGFBR1": [
+        {
+          "src": "tgfbr1",
+          "tgt": "alpha-sma",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 5,
+          "tgt_deg": 9
+        },
+        {
+          "src": "alpha-sma",
+          "tgt": "tgf-beta",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 9,
+          "tgt_deg": 116
+        },
+        {
+          "src": "tgf-beta",
+          "tgt": "smad3",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 116,
+          "tgt_deg": 21
+        },
+        {
+          "src": "smad3",
+          "tgt": "transferrin receptor",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": false,
+          "bfs3": true,
+          "src_deg": 21,
+          "tgt_deg": 20
+        }
+      ],
+      "#40 Fasting": [
+        {
+          "src": "fasting",
+          "tgt": "ncoa4",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 14,
+          "tgt_deg": 12
+        },
+        {
+          "src": "ncoa4",
+          "tgt": "ferritinophagy",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 12,
+          "tgt_deg": 11
+        },
+        {
+          "src": "ferritinophagy",
+          "tgt": "ferritin",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 11,
+          "tgt_deg": 71
+        },
+        {
+          "src": "ferritin",
+          "tgt": "ferroportin",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 71,
+          "tgt_deg": 9
+        },
+        {
+          "src": "ferroportin",
+          "tgt": "gpx4",
+          "direct": false,
+          "bfs1": false,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 9,
+          "tgt_deg": 41
+        },
+        {
+          "src": "gpx4",
+          "tgt": "ferroptosis",
+          "direct": true,
+          "bfs1": true,
+          "bfs2": true,
+          "bfs3": true,
+          "src_deg": 41,
+          "tgt_deg": 361
+        }
+      ]
+    }
+  },
+  "gap5_conclusion": {
+    "predicted_d_drain": 3.5,
+    "predicted_optimal_W": "3-4",
+    "empirical_rates": {
+      "1": 100.0,
+      "2": 66.67,
+      "3": 50.0,
+      "4": 57.14,
+      "endpoints": 51.43
+    },
+    "drop_W1_to_W2": 33.33,
+    "drop_W2_to_W3": 16.67,
+    "drop_W3_to_W4": -7.14,
+    "drop_W4_to_endpoints": 5.71,
+    "endpoints_rate": 51.43,
+    "bottleneck_edge_fraction": 43.75,
+    "revised_conclusion": "W* is not a global constant. It is a local function: W*(region) = min(d_drain, 1/bottleneck_density). On NeuroCrystal validated traces, bottleneck_density = 0.44, which forces W* -> 1. Drainage sets the ceiling; bottleneck edges set the floor.",
+    "lume0_implications": [
+      "LUME-0 must detect bottleneck edges, not just count hops",
+      "Adaptive spacing: dense in sparse regions, sparse in hub-rich regions",
+      "Well-connected regions: W=3-4 sufficient",
+      "Domain boundary crossings: W=1 necessary",
+      "Gap detection IS the discovery problem -- knowing where bottlenecks are = knowing the path"
+    ]
+  }
+}

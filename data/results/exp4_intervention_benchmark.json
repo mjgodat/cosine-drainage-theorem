@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Cora",
+    "n_pairs": 1000,
+    "mean_distance": 7.014,
+    "results_by_budget": {
+      "2": {
+        "single_reach": 0.0,
+        "multi_reach": 0.0,
+        "single_count": 0,
+        "multi_count": 0,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "3": {
+        "single_reach": 0.0,
+        "multi_reach": 0.0,
+        "single_count": 0,
+        "multi_count": 0,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "4": {
+        "single_reach": 0.11,
+        "multi_reach": 0.11,
+        "single_count": 110,
+        "multi_count": 110,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "5": {
+        "single_reach": 0.321,
+        "multi_reach": 0.321,
+        "single_count": 321,
+        "multi_count": 321,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "6": {
+        "single_reach": 0.566,
+        "multi_reach": 0.566,
+        "single_count": 566,
+        "multi_count": 566,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "8": {
+        "single_reach": 0.837,
+        "multi_reach": 0.837,
+        "single_count": 837,
+        "multi_count": 837,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "10": {
+        "single_reach": 0.902,
+        "multi_reach": 0.902,
+        "single_count": 902,
+        "multi_count": 902,
+        "total": 1000,
+        "improvement_pct": 0.0
+      }
+    }
+  },
+  {
+    "name": "Amazon Computers",
+    "n_pairs": 1000,
+    "mean_distance": 4.428,
+    "results_by_budget": {
+      "2": {
+        "single_reach": 0.0,
+        "multi_reach": 0.0,
+        "single_count": 0,
+        "multi_count": 0,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "3": {
+        "single_reach": 0.0,
+        "multi_reach": 0.0,
+        "single_count": 0,
+        "multi_count": 0,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "4": {
+        "single_reach": 0.792,
+        "multi_reach": 0.792,
+        "single_count": 792,
+        "multi_count": 792,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "5": {
+        "single_reach": 0.965,
+        "multi_reach": 0.965,
+        "single_count": 965,
+        "multi_count": 965,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "6": {
+        "single_reach": 0.977,
+        "multi_reach": 0.977,
+        "single_count": 977,
+        "multi_count": 977,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "8": {
+        "single_reach": 0.982,
+        "multi_reach": 0.982,
+        "single_count": 982,
+        "multi_count": 982,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "10": {
+        "single_reach": 0.982,
+        "multi_reach": 0.982,
+        "single_count": 982,
+        "multi_count": 982,
+        "total": 1000,
+        "improvement_pct": 0.0
+      }
+    }
+  },
+  {
+    "name": "DBLP",
+    "n_pairs": 1000,
+    "mean_distance": 6.6,
+    "results_by_budget": {
+      "2": {
+        "single_reach": 0.0,
+        "multi_reach": 0.0,
+        "single_count": 0,
+        "multi_count": 0,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "3": {
+        "single_reach": 0.0,
+        "multi_reach": 0.0,
+        "single_count": 0,
+        "multi_count": 0,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "4": {
+        "single_reach": 0.167,
+        "multi_reach": 0.167,
+        "single_count": 167,
+        "multi_count": 167,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "5": {
+        "single_reach": 0.414,
+        "multi_reach": 0.414,
+        "single_count": 414,
+        "multi_count": 414,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "6": {
+        "single_reach": 0.639,
+        "multi_reach": 0.639,
+        "single_count": 639,
+        "multi_count": 639,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "8": {
+        "single_reach": 0.851,
+        "multi_reach": 0.851,
+        "single_count": 851,
+        "multi_count": 851,
+        "total": 1000,
+        "improvement_pct": 0.0
+      },
+      "10": {
+        "single_reach": 0.913,
+        "multi_reach": 0.913,
+        "single_count": 913,
+        "multi_count": 913,
+        "total": 1000,
+        "improvement_pct": 0.0
+      }
+    }
+  }
+]

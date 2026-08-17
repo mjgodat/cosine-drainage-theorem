@@ -1,0 +1,135 @@
+{
+  "n_traces": 13,
+  "traces": {
+    "#1 Cobenfy": [
+      "xanomeline",
+      "muscarinic",
+      "dopamine",
+      "incentive salience",
+      "psychosis"
+    ],
+    "#5 PTSD": [
+      "ptsd",
+      "norepinephrine",
+      "locus coeruleus",
+      "amygdala",
+      "fear extinction"
+    ],
+    "#9 PANoptosis": [
+      "cuproptosis",
+      "pyroptosis",
+      "necroptosis"
+    ],
+    "#10 Thromboinflammation": [
+      "thromboinflammation",
+      "nlrp3",
+      "colchicine",
+      "neuroinflammation"
+    ],
+    "#22 OCD-HPA": [
+      "cortical",
+      "circuitry",
+      "compulsion",
+      "cortisone"
+    ],
+    "#25 PP2A-NR2A": [
+      "tauopathy",
+      "neuronal loss",
+      "neurofibrillary tangles",
+      "pp2a",
+      "nr2a"
+    ],
+    "#28 C9orf72": [
+      "c9orf72",
+      "rna-binding protein",
+      "ftd",
+      "c19orf12"
+    ],
+    "#29 Eden": [
+      "tryptamine",
+      "aryl hydrocarbon receptor",
+      "slc7a11",
+      "cystine",
+      "glutathione",
+      "gpx4",
+      "ferroptosis"
+    ],
+    "#33 ECT-SHANK3": [
+      "ect",
+      "shank3",
+      "autism",
+      "catatonia"
+    ],
+    "#35 Faecalibacterium": [
+      "faecalibacterium",
+      "fibrillization",
+      "enteric nerve",
+      "alpha-synuclein",
+      "dopaminergic neuron"
+    ],
+    "#36 PWS-OXT": [
+      "appetite regulation",
+      "sociability",
+      "seeking",
+      "oxytocin"
+    ],
+    "#38 TGFBR1-TFR1": [
+      "tgfbr1",
+      "alpha-sma",
+      "tgf-beta",
+      "smad3",
+      "transferrin receptor"
+    ],
+    "#40 Fasting": [
+      "fasting",
+      "ncoa4",
+      "ferritinophagy",
+      "ferritin",
+      "ferroportin",
+      "gpx4",
+      "ferroptosis"
+    ]
+  },
+  "results_by_budget": {
+    "25": {
+      "cos_wp": 45.76923076923077,
+      "multi_wp": 51.53846153846154,
+      "bfs_wp": 43.223443223443226,
+      "cos_int": 14.87179487179487,
+      "multi_int": 14.87179487179487,
+      "bfs_int": 33.33333333333333
+    },
+    "50": {
+      "cos_wp": 45.76923076923077,
+      "multi_wp": 51.53846153846154,
+      "bfs_wp": 46.3003663003663,
+      "cos_int": 14.87179487179487,
+      "multi_int": 14.87179487179487,
+      "bfs_int": 38.46153846153846
+    },
+    "100": {
+      "cos_wp": 45.76923076923077,
+      "multi_wp": 51.53846153846154,
+      "bfs_wp": 50.86080586080587,
+      "cos_int": 14.87179487179487,
+      "multi_int": 14.87179487179487,
+      "bfs_int": 41.02564102564103
+    },
+    "200": {
+      "cos_wp": 45.76923076923077,
+      "multi_wp": 53.07692307692308,
+      "bfs_wp": 61.7032967032967,
+      "cos_int": 14.87179487179487,
+      "multi_int": 17.435897435897434,
+      "bfs_int": 53.84615384615384
+    },
+    "500": {
+      "cos_wp": 56.86813186813187,
+      "multi_wp": 59.17582417582418,
+      "bfs_wp": 67.08791208791209,
+      "cos_int": 26.666666666666664,
+      "multi_int": 27.94871794871795,
+      "bfs_int": 60.25641025641025
+    }
+  }
+}

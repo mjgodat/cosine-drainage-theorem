@@ -1,0 +1,12 @@
+{
+  "n_pairs": 200,
+  "budget": 100,
+  "cos_steps": 4841,
+  "bfs_steps": 351,
+  "cos_mean_orc": -0.053466831938976514,
+  "bfs_mean_orc": -0.01333524592156598,
+  "cos_mean_degree": 85.8492047097707,
+  "bfs_mean_degree": 293.43304843304844,
+  "cos_mean_cand_cos": 0.4174841273442054,
+  "bfs_mean_cand_cos": 0.41844502374079917
+}

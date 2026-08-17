@@ -1,0 +1,76 @@
+{
+  "graph": "PRSM Crystal",
+  "n_grains": 39220,
+  "n_pairs": 500,
+  "k_seed": 10,
+  "mean_cosine": 0.40493127036094667,
+  "zero_overlap": 20,
+  "results_by_budget": {
+    "25": {
+      "cosine_single": 0.016,
+      "cosine_multi": 0.07,
+      "bfs": 0.022,
+      "cos_s_count": 8,
+      "cos_m_count": 35,
+      "bfs_count": 11,
+      "total": 500,
+      "multi_vs_single_pct": 337.50000000000006,
+      "bfs_vs_cosine_pct": 37.499999999999986
+    },
+    "50": {
+      "cosine_single": 0.04,
+      "cosine_multi": 0.1,
+      "bfs": 0.058,
+      "cos_s_count": 20,
+      "cos_m_count": 50,
+      "bfs_count": 29,
+      "total": 500,
+      "multi_vs_single_pct": 150.0,
+      "bfs_vs_cosine_pct": 45.00000000000001
+    },
+    "100": {
+      "cosine_single": 0.068,
+      "cosine_multi": 0.128,
+      "bfs": 0.096,
+      "cos_s_count": 34,
+      "cos_m_count": 64,
+      "bfs_count": 48,
+      "total": 500,
+      "multi_vs_single_pct": 88.23529411764704,
+      "bfs_vs_cosine_pct": 41.17647058823529
+    },
+    "200": {
+      "cosine_single": 0.128,
+      "cosine_multi": 0.132,
+      "bfs": 0.168,
+      "cos_s_count": 64,
+      "cos_m_count": 66,
+      "bfs_count": 84,
+      "total": 500,
+      "multi_vs_single_pct": 3.1250000000000027,
+      "bfs_vs_cosine_pct": 31.250000000000007
+    },
+    "500": {
+      "cosine_single": 0.23,
+      "cosine_multi": 0.134,
+      "bfs": 0.32,
+      "cos_s_count": 115,
+      "cos_m_count": 67,
+      "bfs_count": 160,
+      "total": 500,
+      "multi_vs_single_pct": -41.73913043478261,
+      "bfs_vs_cosine_pct": 39.13043478260869
+    },
+    "1000": {
+      "cosine_single": 0.408,
+      "cosine_multi": 0.134,
+      "bfs": 0.456,
+      "cos_s_count": 204,
+      "cos_m_count": 67,
+      "bfs_count": 228,
+      "total": 500,
+      "multi_vs_single_pct": -67.15686274509804,
+      "bfs_vs_cosine_pct": 11.764705882352953
+    }
+  }
+}

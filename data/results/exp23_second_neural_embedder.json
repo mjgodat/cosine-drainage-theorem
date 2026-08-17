@@ -1,0 +1,306 @@
+{
+  "experiment": "exp23_second_neural_embedder",
+  "description": "Tests VGSG findings (Gamma, P4, policy ordering) on BGE-small-en-v1.5 (384D, BAAI family) \u2014 a completely different neural embedding model from nomic-embed-text (768D, Nomic family).",
+  "embedder": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "dim": 384,
+    "family": "BAAI",
+    "comparison": "nomic-embed-text-v1.5 (768D, Nomic AI)"
+  },
+  "parameters": {
+    "n_pairs": 200,
+    "budgets": [
+      25,
+      50,
+      100
+    ],
+    "k_gamma": 20,
+    "n_p4_queries": 200,
+    "bfs_depth": 3,
+    "text_generation": "top-20 nonzero BoW feature indices as 'feature_N' tokens"
+  },
+  "graphs": [
+    {
+      "graph_name": "Cora",
+      "N": 2708,
+      "D_original": 1433,
+      "n_edges": 5278,
+      "n_pairs": 200,
+      "variants": {
+        "Native BoW (1433D)": {
+          "D": 1433,
+          "gamma": {
+            "mean": 0.17585060000419617,
+            "std": 0.03418906778097153,
+            "rho_degree": 0.10956541726183187,
+            "p_degree": 1.0893385164420415e-08
+          },
+          "P4": {
+            "cos_seed_mean_deg": 4.84,
+            "rand_seed_mean_deg": 4.43,
+            "ratio": 1.09255079006772,
+            "hub_attraction": false,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.5,
+              "100": 1.5
+            },
+            "Cosine": {
+              "25": 18.5,
+              "50": 30.5,
+              "100": 49.5
+            },
+            "Multi-Anchor": {
+              "25": 19.0,
+              "50": 41.5,
+              "100": 69.0
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 19.0,
+              "Cosine": 18.5,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "50": {
+              "Multi": 41.5,
+              "Cosine": 30.5,
+              "BFS": 0.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 69.0,
+              "Cosine": 49.5,
+              "BFS": 1.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        },
+        "BGE-small-en-v1.5 (384D)": {
+          "D": 384,
+          "gamma": {
+            "mean": 0.837199330329895,
+            "std": 0.04073135554790497,
+            "rho_degree": 0.006706716251864392,
+            "p_degree": 0.7272020071995187
+          },
+          "P4": {
+            "cos_seed_mean_deg": 3.985,
+            "rand_seed_mean_deg": 4.47,
+            "ratio": 0.8914988814317674,
+            "hub_attraction": false,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.5,
+              "100": 1.5
+            },
+            "Cosine": {
+              "25": 8.5,
+              "50": 14.499999999999998,
+              "100": 26.5
+            },
+            "Multi-Anchor": {
+              "25": 9.5,
+              "50": 24.0,
+              "100": 51.0
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 9.5,
+              "Cosine": 8.5,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "50": {
+              "Multi": 24.0,
+              "Cosine": 14.499999999999998,
+              "BFS": 0.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 51.0,
+              "Cosine": 26.5,
+              "BFS": 1.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "graph_name": "DBLP",
+      "N": 17716,
+      "D_original": 1639,
+      "n_edges": 52867,
+      "n_pairs": 200,
+      "variants": {
+        "Native BoW (1639D)": {
+          "D": 1639,
+          "gamma": {
+            "mean": 0.2961706817150116,
+            "std": 0.0664631724357605,
+            "rho_degree": 0.1344361363775084,
+            "p_degree": 3.1126959983783676e-72
+          },
+          "P4": {
+            "cos_seed_mean_deg": 8.185,
+            "rand_seed_mean_deg": 7.875,
+            "ratio": 1.0393650793650795,
+            "hub_attraction": false,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 0.5
+            },
+            "Cosine": {
+              "25": 17.0,
+              "50": 25.5,
+              "100": 40.0
+            },
+            "Multi-Anchor": {
+              "25": 14.000000000000002,
+              "50": 34.5,
+              "100": 59.5
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 14.000000000000002,
+              "Cosine": 17.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": false,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": false
+            },
+            "50": {
+              "Multi": 34.5,
+              "Cosine": 25.5,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 59.5,
+              "Cosine": 40.0,
+              "BFS": 0.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        },
+        "BGE-small-en-v1.5 (384D)": {
+          "D": 384,
+          "gamma": {
+            "mean": 0.8024360537528992,
+            "std": 0.02965189330279827,
+            "rho_degree": 0.12291278911503038,
+            "p_degree": 1.3528663172577994e-60
+          },
+          "P4": {
+            "cos_seed_mean_deg": 8.335,
+            "rand_seed_mean_deg": 5.32,
+            "ratio": 1.5667293233082709,
+            "hub_attraction": true,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 0.5
+            },
+            "Cosine": {
+              "25": 6.0,
+              "50": 11.5,
+              "100": 19.0
+            },
+            "Multi-Anchor": {
+              "25": 4.0,
+              "50": 16.5,
+              "100": 34.0
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 4.0,
+              "Cosine": 6.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": false,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": false
+            },
+            "50": {
+              "Multi": 16.5,
+              "Cosine": 11.5,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 34.0,
+              "Cosine": 19.0,
+              "BFS": 0.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "verdicts": {
+    "bge_ordering_holds_all": true,
+    "native_ordering_holds_all": true,
+    "all_variants_hold": true,
+    "per_variant": [
+      {
+        "graph": "Cora",
+        "variant": "Native BoW (1433D)",
+        "ordering_holds": true
+      },
+      {
+        "graph": "Cora",
+        "variant": "BGE-small-en-v1.5 (384D)",
+        "ordering_holds": true
+      },
+      {
+        "graph": "DBLP",
+        "variant": "Native BoW (1639D)",
+        "ordering_holds": true
+      },
+      {
+        "graph": "DBLP",
+        "variant": "BGE-small-en-v1.5 (384D)",
+        "ordering_holds": true
+      }
+    ]
+  },
+  "runtime_s": 18.742511987686157
+}

@@ -1,0 +1,131 @@
+{
+  "graph": "PRSM Crystal",
+  "n_grains": 39220,
+  "n_edges": 116916,
+  "n_pairs": 1000,
+  "mean_graph_distance": 3.221,
+  "mean_corpus_overlap": 3.646,
+  "zero_overlap_pairs": 136,
+  "results_by_budget": {
+    "2": {
+      "single_reach": 0.0,
+      "multi_reach": 0.0,
+      "single_count": 0,
+      "multi_count": 0,
+      "total": 1000,
+      "improvement_pct": 0
+    },
+    "3": {
+      "single_reach": 0.921,
+      "multi_reach": 0.921,
+      "single_count": 921,
+      "multi_count": 921,
+      "total": 1000,
+      "improvement_pct": 0.0
+    },
+    "4": {
+      "single_reach": 0.979,
+      "multi_reach": 0.979,
+      "single_count": 979,
+      "multi_count": 979,
+      "total": 1000,
+      "improvement_pct": 0.0
+    },
+    "5": {
+      "single_reach": 0.989,
+      "multi_reach": 0.989,
+      "single_count": 989,
+      "multi_count": 989,
+      "total": 1000,
+      "improvement_pct": 0.0
+    },
+    "6": {
+      "single_reach": 0.989,
+      "multi_reach": 0.989,
+      "single_count": 989,
+      "multi_count": 989,
+      "total": 1000,
+      "improvement_pct": 0.0
+    },
+    "8": {
+      "single_reach": 0.989,
+      "multi_reach": 0.989,
+      "single_count": 989,
+      "multi_count": 989,
+      "total": 1000,
+      "improvement_pct": 0.0
+    },
+    "10": {
+      "single_reach": 0.989,
+      "multi_reach": 0.989,
+      "single_count": 989,
+      "multi_count": 989,
+      "total": 1000,
+      "improvement_pct": 0.0
+    }
+  },
+  "strata_by_distance": {
+    "3": {
+      "single": 1.0,
+      "multi": 1.0,
+      "total": 921,
+      "improvement": 0.0
+    },
+    "4": {
+      "single": 1.0,
+      "multi": 1.0,
+      "total": 58,
+      "improvement": 0.0
+    },
+    "5": {
+      "single": 1.0,
+      "multi": 1.0,
+      "total": 10,
+      "improvement": 0.0
+    },
+    "10": {
+      "single": 0.0,
+      "multi": 0.0,
+      "total": 11,
+      "improvement": 0.0
+    }
+  },
+  "strata_by_overlap": {
+    "0": {
+      "single": 0.9632352941176471,
+      "multi": 0.9632352941176471,
+      "total": 136,
+      "improvement": 0.0
+    },
+    "1": {
+      "single": 0.9871794871794872,
+      "multi": 0.9871794871794872,
+      "total": 156,
+      "improvement": 0.0
+    },
+    "2": {
+      "single": 0.9933774834437086,
+      "multi": 0.9933774834437086,
+      "total": 151,
+      "improvement": 0.0
+    },
+    "3": {
+      "single": 0.9929577464788732,
+      "multi": 0.9929577464788732,
+      "total": 142,
+      "improvement": 0.0
+    },
+    "4": {
+      "single": 1.0,
+      "multi": 1.0,
+      "total": 102,
+      "improvement": 0.0
+    },
+    "5": {
+      "single": 0.9936102236421726,
+      "multi": 0.9936102236421726,
+      "total": 313,
+      "improvement": 0.0
+    }
+  }
+}

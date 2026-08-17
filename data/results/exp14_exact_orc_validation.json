@@ -1,0 +1,16 @@
+{
+  "n_edges": 500,
+  "n_subgraph_nodes": 4652,
+  "n_subgraph_edges": 56223,
+  "rho_proxy_exact": 0.006000024000096001,
+  "p_proxy_exact": 0.8935369866602271,
+  "rho_cos_exact_orc": 0.07839055356221424,
+  "p_cos_exact_orc": 0.07991587098176049,
+  "rho_cos_proxy_orc": -0.9658436393745574,
+  "p_cos_proxy_orc": 3.13514734667968e-294,
+  "exact_orc_mean": -0.03167802929805238,
+  "exact_orc_std": 0.09180493362600375,
+  "proxy_orc_mean": -0.04014089060276259,
+  "proxy_orc_std": 0.3811028952438809,
+  "sign_agreement_pct": 47.599999999999994
+}

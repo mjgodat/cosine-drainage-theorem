@@ -1,0 +1,615 @@
+{
+  "experiment": "exp21_second_embedder",
+  "description": "Projection invariance test for VGSG findings",
+  "n_pairs": 200,
+  "budgets": [
+    25,
+    50,
+    100
+  ],
+  "k_gamma": 20,
+  "graphs": [
+    {
+      "graph_name": "Cora",
+      "N": 2708,
+      "D_original": 1433,
+      "n_edges": 5278,
+      "n_pairs": 200,
+      "pca_128_variance_explained": 0.5038278296932623,
+      "variants": {
+        "Native (1433D)": {
+          "D": 1433,
+          "gamma": {
+            "mean": 0.17585060000419617,
+            "std": 0.03418906778097153,
+            "rho_degree": 0.10956541726183187,
+            "p_degree": 1.0893385164420415e-08,
+            "by_degree_bin": {
+              "0-5": {
+                "n": 2010,
+                "gamma_mean": 0.17473769187927246
+              },
+              "5-20": {
+                "n": 674,
+                "gamma_mean": 0.1788674294948578
+              },
+              "20-50": {
+                "n": 20,
+                "gamma_mean": 0.1839233934879303
+              },
+              "50-200": {
+                "n": 4,
+                "gamma_mean": 0.18638914823532104
+              }
+            }
+          },
+          "P4": {
+            "cos_seed_mean_deg": 4.84,
+            "rand_seed_mean_deg": 4.43,
+            "ratio": 1.09255079006772,
+            "cos_bfs_mean_deg": 5.97476138684704,
+            "rand_bfs_mean_deg": 6.351559010165013,
+            "hub_attraction": false,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.5,
+              "100": 1.5
+            },
+            "Cosine": {
+              "25": 18.5,
+              "50": 30.5,
+              "100": 49.5
+            },
+            "Multi-Anchor": {
+              "25": 19.0,
+              "50": 41.5,
+              "100": 69.0
+            },
+            "Fwd-Push PPR": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 1.5
+            },
+            "Bidir PPR": {
+              "25": 5.0,
+              "50": 9.5,
+              "100": 22.0
+            },
+            "MMR": {
+              "25": 10.5,
+              "50": 19.0,
+              "100": 38.0
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 19.0,
+              "Cosine": 18.5,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "50": {
+              "Multi": 41.5,
+              "Cosine": 30.5,
+              "BFS": 0.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 69.0,
+              "Cosine": 49.5,
+              "BFS": 1.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        },
+        "Random Proj (384D)": {
+          "D": 384,
+          "gamma": {
+            "mean": 0.19467945396900177,
+            "std": 0.03395570442080498,
+            "rho_degree": 0.10439296278926223,
+            "p_degree": 5.185729595988477e-08,
+            "by_degree_bin": {
+              "0-5": {
+                "n": 2010,
+                "gamma_mean": 0.1936189979314804
+              },
+              "5-20": {
+                "n": 674,
+                "gamma_mean": 0.19757242500782013
+              },
+              "20-50": {
+                "n": 20,
+                "gamma_mean": 0.2032454013824463
+              },
+              "50-200": {
+                "n": 4,
+                "gamma_mean": 0.19725660979747772
+              }
+            }
+          },
+          "P4": {
+            "cos_seed_mean_deg": 3.6,
+            "rand_seed_mean_deg": 4.47,
+            "ratio": 0.8053691275167786,
+            "cos_bfs_mean_deg": 5.729277670518454,
+            "rand_bfs_mean_deg": 5.698629543292295,
+            "hub_attraction": false,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.5,
+              "100": 1.5
+            },
+            "Cosine": {
+              "25": 14.000000000000002,
+              "50": 26.0,
+              "100": 42.5
+            },
+            "Multi-Anchor": {
+              "25": 15.0,
+              "50": 32.0,
+              "100": 66.0
+            },
+            "Fwd-Push PPR": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 1.5
+            },
+            "Bidir PPR": {
+              "25": 5.0,
+              "50": 9.5,
+              "100": 22.0
+            },
+            "MMR": {
+              "25": 7.5,
+              "50": 21.5,
+              "100": 36.0
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 15.0,
+              "Cosine": 14.000000000000002,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "50": {
+              "Multi": 32.0,
+              "Cosine": 26.0,
+              "BFS": 0.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 66.0,
+              "Cosine": 42.5,
+              "BFS": 1.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        },
+        "PCA (128D)": {
+          "D": 128,
+          "gamma": {
+            "mean": 0.26856353878974915,
+            "std": 0.07025060057640076,
+            "rho_degree": 0.005543910413676984,
+            "p_degree": 0.7730669667337462,
+            "by_degree_bin": {
+              "0-5": {
+                "n": 2010,
+                "gamma_mean": 0.26922357082366943
+              },
+              "5-20": {
+                "n": 674,
+                "gamma_mean": 0.2664627730846405
+              },
+              "20-50": {
+                "n": 20,
+                "gamma_mean": 0.27005672454833984
+              },
+              "50-200": {
+                "n": 4,
+                "gamma_mean": 0.28339463472366333
+              }
+            }
+          },
+          "P4": {
+            "cos_seed_mean_deg": 4.055,
+            "rand_seed_mean_deg": 3.835,
+            "ratio": 1.057366362451108,
+            "cos_bfs_mean_deg": 6.309961999007405,
+            "rand_bfs_mean_deg": 5.970541076524663,
+            "hub_attraction": false,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.5,
+              "100": 1.5
+            },
+            "Cosine": {
+              "25": 18.0,
+              "50": 28.999999999999996,
+              "100": 50.5
+            },
+            "Multi-Anchor": {
+              "25": 17.5,
+              "50": 40.0,
+              "100": 70.5
+            },
+            "Fwd-Push PPR": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 1.5
+            },
+            "Bidir PPR": {
+              "25": 5.0,
+              "50": 9.5,
+              "100": 22.0
+            },
+            "MMR": {
+              "25": 13.5,
+              "50": 25.0,
+              "100": 45.0
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 17.5,
+              "Cosine": 18.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": false,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": false
+            },
+            "50": {
+              "Multi": 40.0,
+              "Cosine": 28.999999999999996,
+              "BFS": 0.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 70.5,
+              "Cosine": 50.5,
+              "BFS": 1.5,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "graph_name": "Amazon Computers",
+      "N": 13752,
+      "D_original": 767,
+      "n_edges": 245861,
+      "n_pairs": 200,
+      "pca_128_variance_explained": 0.5545686227979493,
+      "variants": {
+        "Native (767D)": {
+          "D": 767,
+          "gamma": {
+            "mean": 0.4075455069541931,
+            "std": 0.1878572404384613,
+            "rho_degree": 0.31147337689559096,
+            "p_degree": 7.446660884563883e-301,
+            "by_degree_bin": {
+              "0-5": {
+                "n": 1671,
+                "gamma_mean": 0.3293647766113281
+              },
+              "5-20": {
+                "n": 4679,
+                "gamma_mean": 0.3705325126647949
+              },
+              "20-50": {
+                "n": 4833,
+                "gamma_mean": 0.41376444697380066
+              },
+              "50-200": {
+                "n": 2363,
+                "gamma_mean": 0.501188337802887
+              },
+              "200-10000": {
+                "n": 206,
+                "gamma_mean": 0.6623492240905762
+              }
+            }
+          },
+          "P4": {
+            "cos_seed_mean_deg": 70.02,
+            "rand_seed_mean_deg": 40.805,
+            "ratio": 1.7159661806151205,
+            "cos_bfs_mean_deg": 45.74757423520071,
+            "rand_bfs_mean_deg": 47.870589593636176,
+            "hub_attraction": true,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 0.0
+            },
+            "Cosine": {
+              "25": 51.0,
+              "50": 64.0,
+              "100": 73.0
+            },
+            "Multi-Anchor": {
+              "25": 47.0,
+              "50": 78.0,
+              "100": 93.0
+            },
+            "Fwd-Push PPR": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 0.0
+            },
+            "Bidir PPR": {
+              "25": 1.0,
+              "50": 5.5,
+              "100": 12.5
+            },
+            "MMR": {
+              "25": 2.0,
+              "50": 5.5,
+              "100": 11.0
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 47.0,
+              "Cosine": 51.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": false,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": false
+            },
+            "50": {
+              "Multi": 78.0,
+              "Cosine": 64.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 93.0,
+              "Cosine": 73.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        },
+        "Random Proj (384D)": {
+          "D": 384,
+          "gamma": {
+            "mean": 0.4267442524433136,
+            "std": 0.17926029860973358,
+            "rho_degree": 0.3095175903610338,
+            "p_degree": 6.395658096825893e-297,
+            "by_degree_bin": {
+              "0-5": {
+                "n": 1671,
+                "gamma_mean": 0.3522033095359802
+              },
+              "5-20": {
+                "n": 4679,
+                "gamma_mean": 0.391582727432251
+              },
+              "20-50": {
+                "n": 4833,
+                "gamma_mean": 0.43346503376960754
+              },
+              "50-200": {
+                "n": 2363,
+                "gamma_mean": 0.5144262313842773
+              },
+              "200-10000": {
+                "n": 206,
+                "gamma_mean": 0.6665728688240051
+              }
+            }
+          },
+          "P4": {
+            "cos_seed_mean_deg": 52.64,
+            "rand_seed_mean_deg": 37.975,
+            "ratio": 1.3861751152073731,
+            "cos_bfs_mean_deg": 47.635569291137635,
+            "rand_bfs_mean_deg": 48.27512406149679,
+            "hub_attraction": true,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 0.0
+            },
+            "Cosine": {
+              "25": 31.0,
+              "50": 47.0,
+              "100": 63.5
+            },
+            "Multi-Anchor": {
+              "25": 32.0,
+              "50": 60.0,
+              "100": 85.0
+            },
+            "Fwd-Push PPR": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 0.0
+            },
+            "Bidir PPR": {
+              "25": 1.0,
+              "50": 5.5,
+              "100": 12.5
+            },
+            "MMR": {
+              "25": 2.5,
+              "50": 3.0,
+              "100": 11.5
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 32.0,
+              "Cosine": 31.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "50": {
+              "Multi": 60.0,
+              "Cosine": 47.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 85.0,
+              "Cosine": 63.5,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        },
+        "PCA (128D)": {
+          "D": 128,
+          "gamma": {
+            "mean": 0.5339311361312866,
+            "std": 0.18805529177188873,
+            "rho_degree": 0.003886859023613655,
+            "p_degree": 0.6519270461941921,
+            "by_degree_bin": {
+              "0-5": {
+                "n": 1671,
+                "gamma_mean": 0.5495220422744751
+              },
+              "5-20": {
+                "n": 4679,
+                "gamma_mean": 0.5288498997688293
+              },
+              "20-50": {
+                "n": 4833,
+                "gamma_mean": 0.5228356719017029
+              },
+              "50-200": {
+                "n": 2363,
+                "gamma_mean": 0.5427297353744507
+              },
+              "200-10000": {
+                "n": 206,
+                "gamma_mean": 0.6822614669799805
+              }
+            }
+          },
+          "P4": {
+            "cos_seed_mean_deg": 38.77,
+            "rand_seed_mean_deg": 46.77,
+            "ratio": 0.8289501817404319,
+            "cos_bfs_mean_deg": 46.375924156936506,
+            "rand_bfs_mean_deg": 48.38064489803023,
+            "hub_attraction": false,
+            "hub_avoidance": false
+          },
+          "policy_benchmark": {
+            "BFS": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 0.0
+            },
+            "Cosine": {
+              "25": 32.0,
+              "50": 45.5,
+              "100": 55.50000000000001
+            },
+            "Multi-Anchor": {
+              "25": 33.0,
+              "50": 53.0,
+              "100": 71.0
+            },
+            "Fwd-Push PPR": {
+              "25": 0.0,
+              "50": 0.0,
+              "100": 0.0
+            },
+            "Bidir PPR": {
+              "25": 1.0,
+              "50": 5.5,
+              "100": 12.5
+            },
+            "MMR": {
+              "25": 9.0,
+              "50": 17.0,
+              "100": 33.5
+            }
+          },
+          "policy_ordering": {
+            "25": {
+              "Multi": 33.0,
+              "Cosine": 32.0,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "50": {
+              "Multi": 53.0,
+              "Cosine": 45.5,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            },
+            "100": {
+              "Multi": 71.0,
+              "Cosine": 55.50000000000001,
+              "BFS": 0.0,
+              "Multi_gt_Cosine": true,
+              "Cosine_gt_BFS": true,
+              "ordering_holds": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "verdicts": {
+    "gamma_invariant": true,
+    "p4_stable": false,
+    "ordering_stable": true
+  },
+  "runtime_s": 29.743972063064575
+}

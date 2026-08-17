@@ -1,0 +1,11 @@
+{
+  "probe_a": {
+    "best_model": "+interaction (\u03b3\u00d7dcv)",
+    "best_loo_mae": 8.982488233133655
+  },
+  "probe_c": {
+    "cos_mean": 13.333333333333332,
+    "multi_mean": 13.333333333333332,
+    "wp_mean": 100.0
+  }
+}

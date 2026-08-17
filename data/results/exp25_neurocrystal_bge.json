@@ -1,0 +1,233 @@
+{
+  "experiment": "exp25_neurocrystal_bge",
+  "description": "Multi-model test: BGE-small-en-v1.5 vs nomic-embed on NeuroCrystal",
+  "timestamp": "2026-08-17 10:14:56",
+  "params": {
+    "n_grains": 39220,
+    "n_edges": 67719,
+    "n_seeds": 100,
+    "n_pairs": 300,
+    "budgets": [
+      25,
+      50,
+      100
+    ],
+    "k_gamma": 20,
+    "n_gamma_sample": 3000,
+    "n_p4_queries": 200,
+    "pca_variance_explained": 1.0
+  },
+  "nomic": {
+    "shape": [
+      39220,
+      768
+    ],
+    "gamma": 0.2500801389883578,
+    "mean_angle": 1.177971363067627,
+    "p4": {
+      "cos_seed_mean_deg": 21.32,
+      "rand_seed_mean_deg": 24.97,
+      "ratio": 0.8538245895074089
+    },
+    "p1": {
+      "rho": 0.0751030557100022,
+      "p": 0.017532218566242787
+    },
+    "p3": {
+      "rho": 0.02252107035807758,
+      "p": 0.31409295523280883
+    },
+    "policy_benchmark": {
+      "25": {
+        "BFS": 1.6666666666666667,
+        "Cosine": 68.66666666666667,
+        "Multi-Anchor": 93.66666666666667,
+        "Fwd-PPR": 1.6666666666666667,
+        "BiPPR": 88.66666666666667,
+        "MMR": 47.333333333333336
+      },
+      "50": {
+        "BFS": 3.0,
+        "Cosine": 74.0,
+        "Multi-Anchor": 96.66666666666667,
+        "Fwd-PPR": 3.0,
+        "BiPPR": 97.66666666666667,
+        "MMR": 57.333333333333336
+      },
+      "100": {
+        "BFS": 7.666666666666666,
+        "Cosine": 81.66666666666667,
+        "Multi-Anchor": 99.0,
+        "Fwd-PPR": 7.666666666666666,
+        "BiPPR": 100.0,
+        "MMR": 65.0
+      }
+    },
+    "ordering_H100": {
+      "Multi_gt_Cosine": true,
+      "Cosine_gt_BFS": true,
+      "MMR_lt_Cosine": true,
+      "full_ordering_holds": true
+    },
+    "waypoint_injection": {
+      "cos_mean": 13.333333333333332,
+      "multi_mean": 13.333333333333332,
+      "wp_mean": 100.0,
+      "per_hypothesis": {
+        "#1 Cobenfy": {
+          "n_intermediates": 3,
+          "cos_found": 0,
+          "multi_found": 0,
+          "wp_found": 3
+        },
+        "#5 PTSD": {
+          "n_intermediates": 3,
+          "cos_found": 0,
+          "multi_found": 0,
+          "wp_found": 3
+        },
+        "#25 PP2A": {
+          "n_intermediates": 3,
+          "cos_found": 0,
+          "multi_found": 0,
+          "wp_found": 3
+        },
+        "#29 Eden": {
+          "n_intermediates": 5,
+          "cos_found": 0,
+          "multi_found": 0,
+          "wp_found": 5
+        },
+        "#35 Faecal": {
+          "n_intermediates": 3,
+          "cos_found": 0,
+          "multi_found": 0,
+          "wp_found": 3
+        },
+        "#38 TGFBR1": {
+          "n_intermediates": 3,
+          "cos_found": 1,
+          "multi_found": 1,
+          "wp_found": 3
+        },
+        "#40 Fasting": {
+          "n_intermediates": 5,
+          "cos_found": 3,
+          "multi_found": 3,
+          "wp_found": 5
+        }
+      }
+    }
+  },
+  "bge": {
+    "shape": [
+      39220,
+      100
+    ],
+    "gamma": 0.1420199438025584,
+    "mean_angle": 1.3477119207382202,
+    "p4": {
+      "cos_seed_mean_deg": 8.985,
+      "rand_seed_mean_deg": 25.105,
+      "ratio": 0.3578968333001394
+    },
+    "p1": {
+      "rho": 0.0768702840045587,
+      "p": 0.01504019102186401
+    },
+    "p3": {
+      "rho": 0.04569520083004332,
+      "p": 0.04101866745579886
+    },
+    "policy_benchmark": {
+      "25": {
+        "BFS": 1.6666666666666667,
+        "Cosine": 66.33333333333333,
+        "Multi-Anchor": 87.66666666666667,
+        "Fwd-PPR": 1.6666666666666667,
+        "BiPPR": 88.66666666666667,
+        "MMR": 53.0
+      },
+      "50": {
+        "BFS": 3.0,
+        "Cosine": 72.33333333333334,
+        "Multi-Anchor": 93.66666666666667,
+        "Fwd-PPR": 3.0,
+        "BiPPR": 97.66666666666667,
+        "MMR": 62.0
+      },
+      "100": {
+        "BFS": 7.666666666666666,
+        "Cosine": 76.33333333333333,
+        "Multi-Anchor": 97.0,
+        "Fwd-PPR": 7.666666666666666,
+        "BiPPR": 100.0,
+        "MMR": 70.66666666666667
+      }
+    },
+    "ordering_H100": {
+      "Multi_gt_Cosine": true,
+      "Cosine_gt_BFS": true,
+      "MMR_lt_Cosine": true,
+      "full_ordering_holds": true
+    },
+    "waypoint_injection": {
+      "cos_mean": 22.857142857142858,
+      "multi_mean": 24.76190476190476,
+      "wp_mean": 100.0,
+      "per_hypothesis": {
+        "#1 Cobenfy": {
+          "n_intermediates": 3,
+          "cos_found": 0,
+          "multi_found": 0,
+          "wp_found": 3
+        },
+        "#5 PTSD": {
+          "n_intermediates": 3,
+          "cos_found": 1,
+          "multi_found": 1,
+          "wp_found": 3
+        },
+        "#25 PP2A": {
+          "n_intermediates": 3,
+          "cos_found": 1,
+          "multi_found": 1,
+          "wp_found": 3
+        },
+        "#29 Eden": {
+          "n_intermediates": 5,
+          "cos_found": 1,
+          "multi_found": 0,
+          "wp_found": 5
+        },
+        "#35 Faecal": {
+          "n_intermediates": 3,
+          "cos_found": 0,
+          "multi_found": 0,
+          "wp_found": 3
+        },
+        "#38 TGFBR1": {
+          "n_intermediates": 3,
+          "cos_found": 1,
+          "multi_found": 2,
+          "wp_found": 3
+        },
+        "#40 Fasting": {
+          "n_intermediates": 5,
+          "cos_found": 2,
+          "multi_found": 2,
+          "wp_found": 5
+        }
+      }
+    }
+  },
+  "comparison": {
+    "ordering_holds_nomic": true,
+    "ordering_holds_bge": true,
+    "wp_injection_nomic": 100.0,
+    "wp_injection_bge": 100.0,
+    "gamma_nomic": 0.2500801389883578,
+    "gamma_bge": 0.1420199438025584,
+    "verdict": "SINGLE-MODEL OBJECTION CLOSED"
+  }
+}
