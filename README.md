@@ -146,7 +146,7 @@ python experiments/exp25_bge_crystal.py
 
 ## The Theorem in Brief
 
-**Assumptions:** Graph with heterogeneous degrees, high-D embedding, residual angular-degree coupling β > 0, sublinear neighbor-degree, cosine-greedy policy.
+**Formal proof:** Rank-one (Chung-Lu) model with assumptions A1–A5 (non-regular degree distribution, high-D embedding, residual angular-degree coupling β > 0, sublinear neighbor-degree, cosine-greedy policy). **Empirical validation:** 15 graph families (scale-free, heterogeneous, co-authorship, co-purchase, citation, web-hyperlink, film co-occurrence, random/Erdős–Rényi, small-world/Watts–Strogatz, block-model/SBM, preferential-attachment/Barabási–Albert, synthetic kNN), 2 neural encoders (nomic 768D, BGE 384D). Multi-Anchor wins all 15 families — including drainage, weak-drainage, and anti-drainage regimes.
 
 **Part (i) Drainage:** E[deg(v_{i+1})] = ρ_eff + α(d_i - ρ_eff), where ρ_eff = ρ·exp(-|β|√D_eff)
 
